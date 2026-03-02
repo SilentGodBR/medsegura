@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guia didático sobre o uso seguro de medicamentos. Entenda os riscos da automedicação de forma simples e proteja sua saúde com fontes confiáveis.">
+    <meta name="keywords" content="automedicação, saúde didática, medicamentos seguros, riscos, ANVISA, OMS, educação em saúde, Brasil">
+    <meta name="author" content="Sarah - Universidade Católica de Brasília">
+    <meta name="date" content="2026-03-02">
+    <meta name="last-modified" content="2026-03-02">
+    
+    <!-- Meta Tags para Redes Sociais -->
+    <meta property="og:title" content="Medicamentos Seguros - Guia de Uso Racional (Sarah - UCB)">
+    <meta property="og:description" content="Entenda os riscos da automedicação e aprenda a se medicar com segurança. Guia educativo oficial.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://medicamentos-seguros.netlify.app">
+    <meta property="og:image" content="https://medicamentos-seguros.netlify.app/share-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Medicamentos Seguros - Guia de Uso Racional">
+    <meta name="twitter:description" content="Educação em saúde que protege você e sua família.">
+    <meta name="twitter:image" content="https://medicamentos-seguros.netlify.app/share-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://medicamentos-seguros.netlify.app">
+    
+    <!-- Preconnect para Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>💊</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>Medicamentos Seguros - Guia Didático e Humano | UCB</title>
+    
+    <style>
+        :root {
+            --primary: #0052A3;
+            --primary-dark: #003D7A;
+            --primary-light: #E8F1FF;
+            --success: #15803D;
+            --success-light: #DCFCE7;
+            --warning: #F59E0B;
+            --danger: #DC2626;
+            --info: #0369A1;
+            --neutral-dark: #1F2937;
+            --neutral-light: #F3F4F6;
+            --text-primary: #111827;
+            --text-secondary: #374151;
+            --border-color: #E5E7EB;
+            --shadow: 0 4px 12px rgba(0, 82, 163, 0.08);
+            --shadow-hover: 0 8px 24px rgba(0, 82, 163, 0.12);
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F9FAFB;
+            
+            --faq-answer-bg: #F0F9FF;
+            --faq-answer-text: #0369A1;
+            --source-tip-bg: #EFF6FF;
+            --source-tip-text: #1E40AF;
+            
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body.dark-mode {
+            --text-primary: #F3F4F6;
+            --text-secondary: #D1D5DB;
+            --bg-primary: #111827;
+            --bg-secondary: #1F2937;
+            --border-color: #374151;
+            --primary-light: rgba(0, 82, 163, 0.3);
+            --faq-answer-bg: #0C4A6E;
+            --faq-answer-text: #BAE6FD;
+            --source-tip-bg: #1E3A8A;
+            --source-tip-text: #DBEAFE;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            --disclaimer-bg: #7C2D12;
+            --disclaimer-text: #FECACA;
+            --alert-info-bg: #0C4A6E;
+            --alert-info-text: #BAE6FD;
+            --alert-danger-bg: #7C2D12;
+            --alert-danger-text: #FECACA;
+        }
+
+        body.dark-mode .disclaimer {
+            background: var(--disclaimer-bg);
+            color: var(--disclaimer-text);
+            border-color: #DC2626;
+        }
+
+        body.dark-mode .alert-info {
+            background: var(--alert-info-bg);
+            color: var(--alert-info-text);
+            border-color: #0EA5E9;
+        }
+
+        body.dark-mode .alert-danger {
+            background: var(--alert-danger-bg);
+            color: var(--alert-danger-text);
+            border-color: #DC2626;
+        }
+
+        body.dark-mode .alert strong {
+            color: inherit;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background-color: var(--bg-secondary);
+            min-height: 100vh;
+            transition: var(--transition);
+        }
+
+        header {
+            position: sticky; top: 0; z-index: 100;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white; padding: 1rem 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            display: flex; justify-content: space-between; align-items: center;
+        }
+
+        header h1 { font-family: 'Merriweather', serif; font-size: 1.4em; font-weight: 700; }
+        .header-controls { display: flex; gap: 0.75rem; align-items: center; }
+        .icon-btn { 
+            background: rgba(255, 255, 255, 0.15); border: none; color: white; font-size: 1.2em; 
+            cursor: pointer; padding: 0.5rem 0.75rem; border-radius: 6px; transition: var(--transition);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .icon-btn:hover { background: rgba(255, 255, 255, 0.25); transform: translateY(-2px); }
+        .icon-btn:focus-visible { outline: 2px solid white; outline-offset: 2px; }
+
+        .hamburger { display: none; flex-direction: column; gap: 5px; width: 30px; height: 24px; }
+        .hamburger span { width: 100%; height: 3px; background: white; border-radius: 2px; transition: var(--transition); }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+
+        .main-container { display: flex; max-width: 1200px; margin: 0 auto; gap: 1.5rem; padding: 1.5rem; position: relative; }
+        
+        .sidebar { 
+            width: 280px; position: sticky; top: 100px; height: fit-content; 
+            background: var(--bg-primary); border-radius: 12px; padding: 1.5rem; 
+            box-shadow: var(--shadow); border: 1px solid var(--border-color); 
+        }
+        .sidebar h3 { color: var(--primary); font-size: 0.9em; margin-bottom: 1.125rem; text-transform: uppercase; letter-spacing: 1px; }
+        .sidebar ul { list-style: none; }
+        .sidebar a { 
+            color: var(--text-primary); text-decoration: none; display: block; padding: 0.625rem 0.875rem; 
+            border-radius: 6px; transition: var(--transition); font-size: 0.95em; 
+        }
+        .sidebar a:hover { background: var(--primary-light); color: var(--primary); }
+        .sidebar a:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+        .sidebar a.active { background: var(--primary); color: white; font-weight: 600; }
+
+        .content { flex: 1; background: var(--bg-primary); border-radius: 12px; padding: 2.5rem; box-shadow: var(--shadow); border: 1px solid var(--border-color); }
+        
+        .disclaimer { 
+            background: rgba(245, 158, 11, 0.1); border-left: 6px solid var(--warning); 
+            padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 8px; display: flex; gap: 1rem; align-items: flex-start;
+        }
+        
+        section { margin-bottom: 4.375rem; scroll-margin-top: 110px; }
+        h1 { font-family: 'Merriweather', serif; color: var(--primary); font-size: 2.2em; margin-bottom: 1.5rem; }
+        h2 { font-family: 'Merriweather', serif; color: var(--primary); font-size: 1.8em; margin-bottom: 1.5rem; border-bottom: 3px solid var(--primary-light); padding-bottom: 0.625rem; }
+        h3 { font-family: 'Merriweather', serif; color: var(--primary-dark); font-size: 1.3em; margin-top: 1.875rem; margin-bottom: 1rem; }
+
+        .didactic-card {
+            background: var(--bg-secondary); border-radius: 12px; padding: 1.75rem; margin: 1.5rem 0;
+            border-left: 6px solid var(--primary); box-shadow: var(--shadow); transition: var(--transition);
+        }
+        .didactic-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+        .didactic-card strong { color: var(--primary); font-size: 1.1em; display: block; margin-bottom: 0.75rem; }
+        
+        .didactic-card .answer { 
+            background: var(--faq-answer-bg); 
+            color: var(--faq-answer-text); 
+            padding: 1.125rem 1.375rem; 
+            border-radius: 10px; 
+            margin-top: 1rem; 
+            font-weight: 500; 
+            border-left: 4px solid var(--info);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .explanation { 
+            font-size: 0.95em; color: var(--text-secondary); margin-top: 1rem; 
+            border-top: 1px solid var(--border-color); padding-top: 1rem; font-style: italic; display: flex; gap: 0.625rem;
+        }
+
+        .alert { padding: 1.5rem; border-radius: 12px; border-left: 6px solid; margin: 1.5rem 0; display: flex; flex-direction: column; gap: 0.625rem; }
+        .alert-info { background: rgba(3, 105, 161, 0.1); border-color: var(--info); }
+        .alert-danger { background: rgba(220, 38, 38, 0.1); border-color: var(--danger); }
+
+        .tip-list { list-style: none; margin: 1.5rem 0; }
+        .tip-item { display: flex; gap: 1rem; margin-bottom: 1.25rem; align-items: flex-start; }
+        .tip-icon { font-size: 1.5em; min-width: 30px; }
+        .tip-text strong { color: var(--primary); }
+
+        .table-container { overflow-x: auto; margin: 1.5rem 0; border-radius: 12px; box-shadow: var(--shadow); }
+        table { width: 100%; border-collapse: collapse; background: var(--bg-primary); }
+        table caption { text-align: left; padding: 1rem; font-weight: 600; color: var(--primary); }
+        th { background: var(--primary); color: white; padding: 1.125rem; text-align: left; scope: col; }
+        td { padding: 1rem; border-bottom: 1px solid var(--border-color); font-size: 0.95em; }
+        tr:hover { background: var(--primary-light); }
+
+        .sources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+        .source-card { 
+            background: var(--bg-secondary); padding: 1.875rem; border-radius: 16px; 
+            border-top: 5px solid var(--primary); box-shadow: var(--shadow); transition: var(--transition); 
+            display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .source-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
+        .source-card h4 { color: var(--primary); margin-bottom: 0.75rem; font-family: 'Merriweather', serif; }
+        
+        .source-card .usage-tip { 
+            font-size: 0.88em; background: var(--source-tip-bg); color: var(--source-tip-text); 
+            padding: 0.9375rem; border-radius: 10px; margin-bottom: 1.25rem; line-height: 1.6;
+            border-left: 3px solid var(--primary);
+        }
+        .source-card .usage-tip strong { display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.8em; letter-spacing: 0.5px; }
+
+        .source-card a { 
+            display: block; color: var(--primary); font-weight: 600; padding: 0.75rem; 
+            border: 2px solid var(--primary); border-radius: 8px; text-decoration: none; text-align: center; transition: var(--transition);
+        }
+        .source-card a:hover { background: var(--primary); color: white; }
+        .source-card a:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+        .btn { 
+            display: inline-block; padding: 1rem 2.25rem; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); 
+            color: white; border-radius: 12px; font-weight: 600; border: none; cursor: pointer; box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .btn:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+        .btn:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+        .floating-share {
+            position: fixed; bottom: 30px; left: 30px; width: 60px; height: 60px; 
+            background: var(--success); color: white; border: none; border-radius: 50%; 
+            cursor: pointer; font-size: 1.5em; display: flex; align-items: center; justify-content: center; 
+            box-shadow: 0 8px 25px rgba(21, 128, 61, 0.4); z-index: 99; transition: var(--transition);
+        }
+        .floating-share:hover { transform: scale(1.1) translateY(-5px); }
+        .floating-share:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+        .back-to-top { 
+            position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; 
+            background: var(--primary); color: white; border: none; border-radius: 50%; 
+            cursor: pointer; font-size: 1.5em; display: none; align-items: center; justify-content: center; 
+            box-shadow: var(--shadow); z-index: 99; transition: var(--transition);
+        }
+        .back-to-top:focus-visible { outline: 2px solid white; outline-offset: 2px; }
+
+        footer { background: var(--neutral-dark); color: white; padding: 3.75rem 1.25rem; text-align: center; margin-top: 5rem; }
+        footer .authorship { margin-top: 1.5625rem; padding-top: 1.5625rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.9em; line-height: 1.8; }
+        .footer-links { margin-top: 1.25rem; display: flex; justify-content: center; gap: 1.5625rem; flex-wrap: wrap; }
+        .footer-links button { background: none; border: none; color: rgba(255,255,255,0.7); font-size: 0.85em; text-decoration: underline; cursor: pointer; transition: var(--transition); }
+        .footer-links button:hover { color: white; }
+        .footer-links button:focus-visible { outline: 2px solid white; outline-offset: 2px; }
+
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); }
+        .modal-content { background: var(--bg-primary); margin: 5% auto; padding: 2.5rem; border-radius: 20px; width: 90%; max-width: 750px; max-height: 85vh; overflow-y: auto; position: relative; }
+        .close-modal { 
+            position: absolute; top: 1.25rem; right: 1.5625rem; font-size: 30px; cursor: pointer; 
+            color: var(--text-secondary); background: none; border: none; transition: var(--transition); 
+            padding: 0.5rem; border-radius: 6px; display: flex; align-items: center; justify-content: center;
+        }
+        .close-modal:hover { color: var(--primary); background: rgba(0, 82, 163, 0.1); }
+        .close-modal:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; background: rgba(0, 82, 163, 0.1); }
+
+        .footer-links button:focus-visible { outline: 2px solid white; outline-offset: 2px; border-radius: 4px; padding: 0.25rem 0.5rem; }
+
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
+
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .main-container { flex-direction: column; padding: 1rem; gap: 1rem; }
+            .sidebar { 
+                display: none; position: fixed; top: 60px; left: 0; width: 100%; height: calc(100vh - 60px); 
+                border-radius: 0; z-index: 99; overflow-y: auto; background: var(--bg-primary); 
+                box-shadow: 2px 0 10px rgba(0,0,0,0.2); padding: 1.5rem; border: none;
+            }
+            .sidebar.active { display: block; }
+            .content { padding: 1.25rem; }
+            header h1 { font-size: 1.1em; }
+            h2 { font-size: 1.5em; }
+            .sources-grid { grid-template-columns: 1fr; }
+            .floating-share { bottom: 20px; left: 20px; width: 50px; height: 50px; font-size: 1.25em; }
+            .back-to-top { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 1.25em; }
+            table { font-size: 0.85em; }
+            td, th { padding: 0.75rem 0.5rem; }
+        }
+
+        @media print {
+            header, .hamburger, .floating-share, .back-to-top, .footer-links { display: none; }
+            .sidebar { display: none; }
+            .main-container { flex-direction: column; }
+            body { background: white; }
+            .content { box-shadow: none; border: none; }
+        }
+    </style>
+</head>
+<body id="top">
+    <header role="banner">
+        <h1>💊 Medicamentos Seguros</h1>
+        <div class="header-controls">
+            <button id="theme-toggle" class="icon-btn" aria-label="Alternar entre modo claro e escuro" aria-pressed="false">🌙</button>
+            <button id="menu-toggle" class="hamburger" aria-label="Abrir menu de navegação" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar" id="sidebar" role="navigation" aria-label="Navegação principal">
+            <h3>Navegação</h3>
+            <ul>
+                <li><a href="#intro" class="nav-link">Por que cuidar?</a></li>
+                <li><a href="#riscos" class="nav-link">Entendendo os Riscos</a></li>
+                <li><a href="#como-medicar" class="nav-link">Dicas de Segurança</a></li>
+                <li><a href="#interacoes" class="nav-link">Misturas Perigosas</a></li>
+                <li><a href="#fontes" class="nav-link">Guia de Pesquisa</a></li>
+                <li><a href="#faq" class="nav-link">Dúvidas Comuns</a></li>
+                <li><a href="#proximos-passos" class="nav-link">Como ajudar?</a></li>
+            </ul>
+        </aside>
+
+        <main class="content" id="main-content" role="main">
+            <div class="disclaimer" role="alert">
+                <span aria-hidden="true">❤️</span>
+                <p><strong>Cuidado com sua saúde:</strong> Este guia é educativo e focado no seu bem-estar. Se você estiver sentindo algo, procure um médico ou converse com o farmacêutico. Em emergências, ligue <strong>192 (SAMU)</strong>.</p>
+            </div>
+
+            <section id="intro" aria-labelledby="intro-heading">
+                <h2 id="intro-heading">Cuidar da Saúde é um Ato de Amor</h2>
+                <p>Muitas vezes, na correria do dia a dia, tomamos um "remedinho" para uma dor de cabeça sem pensar nas consequências. No entanto, o que parece ser uma solução rápida pode esconder perigos invisíveis. No Brasil, o uso inadequado de medicamentos é uma das maiores causas de internações e complicações graves de saúde.</p>
+                <div class="alert alert-info" role="alert">
+                    <strong>💡 Você sabia?</strong>
+                    <p>Aproximadamente <strong>20 mil pessoas morrem por ano</strong> no Brasil em decorrência do uso incorreto de remédios. Isso é mais do que muitos acidentes graves. Ao se informar, você protege a si mesmo e a quem você ama.</p>
+                </div>
+            </section>
+
+            <section id="riscos" aria-labelledby="riscos-heading">
+                <h2 id="riscos-heading">🚨 Entendendo os Riscos (O que acontece no corpo?)</h2>
+                <p>O medicamento é uma ferramenta poderosa, mas deve ser usado com respeito. Entenda como a automedicação pode afetar seu organismo de forma profunda:</p>
+                
+                <div class="didactic-card">
+                    <strong>Reações Alérgicas Inesperadas</strong>
+                    <p>O seu corpo pode "estranhar" uma substância de repente, desencadeando uma resposta imunológica agressiva, mesmo que você já tenha tomado o remédio antes.</p>
+                    <div class="explanation"><span aria-hidden="true">💡</span><p>Imagine o remédio como um "invasor" que seu corpo decide atacar por engano, causando desde manchas na pele até inchaços perigosos na garganta.</p></div>
+                </div>
+                
+                <div class="didactic-card">
+                    <strong>Interações: A "Briga" entre Medicamentos</strong>
+                    <p>Quando você mistura remédios por conta própria, um pode anular o efeito do outro ou, pior, potencializar a toxicidade no seu fígado e rins.</p>
+                    <div class="explanation"><span aria-hidden="true">💡</span><p>É como misturar dois produtos químicos fortes: o resultado pode ser uma reação imprevista e prejudicial dentro do seu organismo.</p></div>
+                </div>
+                
+                <div class="didactic-card">
+                    <strong>Resistência Bacteriana (Superbactérias)</strong>
+                    <p>O uso inadequado de antibióticos "ensina" as bactérias a sobreviverem, tornando as doenças muito mais difíceis de tratar no futuro.</p>
+                    <div class="explanation"><span aria-hidden="true">💡</span><p>É como se você desse um "manual de defesa" para a bactéria. Na próxima vez que precisar do remédio, ele pode não funcionar mais.</p></div>
+                </div>
+            </section>
+
+            <section id="como-medicar" aria-labelledby="como-medicar-heading">
+                <h2 id="como-medicar-heading">✅ Dicas para uma Medicação Segura</h2>
+                <p>Pequenos hábitos garantem que o tratamento funcione como deveria. Siga estas orientações fundamentais:</p>
+                
+                <div class="tip-list">
+                    <div class="tip-item"><div class="tip-icon" aria-hidden="true">💧</div><div class="tip-text"><strong>Água é a melhor amiga:</strong> Tome remédios sempre com um copo cheio de água. Leite, sucos, refrigerantes ou café podem reagir com a fórmula e impedir a absorção correta pelo sangue.</div></div>
+                    <div class="tip-item"><div class="tip-icon" aria-hidden="true">💊</div><div class="tip-text"><strong>Não parta o comprimido:</strong> A menos que ele tenha o sulco (aquela marca de corte no meio). Sem o sulco, a substância não é distribuída igualmente, e você pode tomar uma dose errada.</div></div>
+                    <div class="tip-item"><div class="tip-icon" aria-hidden="true">🚫</div><div class="tip-text"><strong>Cuidado com o álcool:</strong> O álcool "distrai" e sobrecarrega o fígado. Se o fígado estiver ocupado processando a bebida, ele não conseguirá limpar o remédio do seu corpo, aumentando o risco de intoxicação.</div></div>
+                    <div class="tip-item"><div class="tip-icon" aria-hidden="true">⏰</div><div class="tip-text"><strong>Respeite o relógio:</strong> Tomar no horário exato mantém a concentração do remédio constante. Atrasar ou adiantar pode fazer com que o tratamento perca a eficácia.</div></div>
+                    <div class="tip-item"><div class="tip-icon" aria-hidden="true">🗑️</div><div class="tip-text"><strong>Descarte correto:</strong> Medicamentos vencidos ou não utilizados nunca devem ser jogados no lixo comum ou no vaso sanitário. Procure um ponto de coleta em farmácias, postos de saúde ou drogarias. O descarte inadequado prejudica o meio ambiente e a saúde pública.</div></div>
+                </div>
+            </section>
+
+            <section id="interacoes" aria-labelledby="interacoes-heading">
+                <h2 id="interacoes-heading">⚠️ Misturas que você deve evitar</h2>
+                <p>Algumas combinações são extremamente perigosas. Confira os exemplos mais comuns que exigem atenção redobrada:</p>
+                <div class="table-container">
+                    <table role="table">
+                        <caption>Combinações perigosas de medicamentos e seus efeitos</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Se misturar isso...</th>
+                                <th scope="col">...Com isso</th>
+                                <th scope="col">O que ocorre?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Paracetamol</strong> (Tylenol)</td>
+                                <td>Álcool</td>
+                                <td>Risco severo de destruição das células do fígado (hepatotoxicidade).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Antibióticos</strong></td>
+                                <td>Anticoncepcional</td>
+                                <td>Alguns antibióticos podem reduzir a eficácia da pílula, aumentando o risco de gravidez.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Remédio de Pressão</strong></td>
+                                <td>Anti-inflamatórios</td>
+                                <td>A pressão pode subir perigosamente e os rins ficam sobrecarregados.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Aspirina / Ibuprofeno</strong></td>
+                                <td>Outros Anti-inflamatórios</td>
+                                <td>Risco aumentado de feridas no estômago (úlceras) e sangramentos internos.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="fontes" aria-labelledby="fontes-heading">
+                <h2 id="fontes-heading">🔍 Guia de Pesquisa (Onde pesquisar com segurança?)</h2>
+                <p>A internet está cheia de informações falsas. Use sempre as ferramentas oficiais para proteger sua saúde. Aqui você encontra 7 fontes confiáveis e verificadas:</p>
+                <div class="sources-grid">
+                    <div class="source-card">
+                        <h3>🏥 Consultas ANVISA</h3>
+                        <p>Verifique se o medicamento é autorizado, seguro e está dentro da validade regulatória no Brasil.</p>
+                        <div class="usage-tip">
+                            <strong>COMO USAR:</strong>
+                            1. Clique no link oficial abaixo.<br>
+                            2. No campo "Nome do Produto", digite o nome que está na caixa.<br>
+                            3. Clique em "Consultar" e verifique se o status aparece como "Ativo".
+                        </div>
+                        <a href="https://consultas.anvisa.gov.br/#/medicamentos/" target="_blank" rel="noopener noreferrer">Acessar ANVISA</a>
+                    </div>
+                    <div class="source-card">
+                        <h3>📱 Aplicativo MedSUS</h3>
+                        <p>Ferramenta do Ministério da Saúde que lista todos os medicamentos oferecidos pelo SUS e suas orientações.</p>
+                        <div class="usage-tip">
+                            <strong>COMO USAR:</strong>
+                            1. Acesse a página informativa pelo link abaixo.<br>
+                            2. Baixe o aplicativo oficial para Android ou iOS.<br>
+                            3. Use a busca para entender para que serve cada remédio da rede pública.
+                        </div>
+                        <a href="https://www.gov.br/saude/pt-br/assuntos/noticias/2024/janeiro/aplicativo-medsus-e-disponibilizado-para-populacao" target="_blank" rel="noopener noreferrer">Conhecer MedSUS</a>
+                    </div>
+                    <div class="source-card">
+                        <h3>💊 Bulário Eletrônico</h3>
+                        <p>Acesse a bula oficial (versão para o paciente), que explica tudo de forma simplificada e direta.</p>
+                        <div class="usage-tip">
+                            <strong>COMO USAR:</strong>
+                            1. Digite o nome do medicamento na barra de busca.<br>
+                            2. Localize a coluna "Bula do Paciente".<br>
+                            3. Clique no ícone de PDF para ler as precauções e efeitos colaterais.
+                        </div>
+                        <a href="https://consultas.anvisa.gov.br/#/bulario/" target="_blank" rel="noopener noreferrer">Ver Bulas Oficiais</a>
+                    </div>
+                    <div class="source-card">
+                        <h3>📚 CRF-SP (Educação)</h3>
+                        <p>Orientações e guias educativos sobre medicamentos e saúde, produzidos pelo Conselho Regional de Farmácia de São Paulo.</p>
+                        <div class="usage-tip">
+                            <strong>COMO USAR:</strong>
+                            1. Acesse o site do CRF-SP pelo link abaixo.<br>
+                            2. Procure pela seção de "Notícias" ou "Informações" no menu principal.<br>
+                            3. Busque por temas como "Uso Racional de Medicamentos" ou "Orientações ao Público".
+                        </div>
+                        <a href="https://www.crfsp.org.br/" target="_blank" rel="noopener noreferrer">Acessar CRF-SP</a>
+                    </div>
+                    <div class="source-card">
+                        <h3>📱 Consulta Remédios (Simplificado)</h3>
+                        <p>Traduz as bulas oficiais para uma linguagem simples e direta, em formato de perguntas e respostas. Perfeito para quem quer entender rápido.</p>
+                        <div class="usage-tip">
+                            <strong>COMO USAR:</strong>
+                            1. Acesse o link abaixo e procure pelo nome do remédio.<br>
+                            2. Leia as seções "Para que serve" e "Como usar".<br>
+                            3. Confira os efeitos colaterais e interações de forma simplificada.
+                        </div>
+                        <a href="https://consultaremedios.com.br/bulas" target="_blank" rel="noopener noreferrer">Consultar Remédios</a>
+                    </div>
+                    <div class="source-card">
+                        <h3>🩺 Portal Tua Saúde</h3>
+                        <p>Maior portal de saúde do Brasil com artigos sobre medicamentos revisados por médicos e farmacêuticos reais. Confiável e atualizado.</p>
+                        <div class="usage-tip">
+                            <strong>COMO USAR:</strong>
+                            1. Acesse o portal pelo link abaixo.<br>
+                            2. Clique em "SINTOMAS" ou use a barra de busca no topo para procurar o medicamento.<br>
+                            3. Leia os artigos sobre efeitos colaterais, horários de ingestão e interações com alimentos.
+                        </div>
+                        <a href="https://www.tuasaude.com/" target="_blank" rel="noopener noreferrer">Explorar Tua Saúde</a>
+                    </div>
+                    <div class="source-card">
+                        <h3>👨‍⚕️ Portal Drauzio Varella</h3>
+                        <p>Artigos, reportagens e vídeos super didáticos explicando os perigos reais de misturar remédios e o uso inadequado de medicamentos.</p>
+                        <div class="usage-tip">
+                            <strong>COMO USAR:</strong>
+                            1. Entre no site oficial pelo link abaixo.<br>
+                            2. Use a busca para encontrar artigos sobre medicamentos ou sintomas.<br>
+                            3. Assista aos vídeos curtos e educativos para entender melhor o tema.
+                        </div>
+                        <a href="https://drauziovarella.uol.com.br/" target="_blank" rel="noopener noreferrer">Acessar Drauzio Varella</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="faq" aria-labelledby="faq-heading">
+                <h2 id="faq-heading">❓ Dúvidas Comuns (O que todos perguntam)</h2>
+                <div class="didactic-card">
+                    <strong>O remédio venceu faz apenas uma semana, ainda posso tomar?</strong>
+                    <div class="answer"><strong>A resposta é não.</strong> Após o vencimento, a estabilidade química não é garantida. O remédio pode não fazer efeito ou, em alguns casos, sofrer alterações que agridem o seu estômago e rins.</div>
+                </div>
+                <div class="didactic-card">
+                    <strong>Esqueci de tomar a dose no horário. Devo tomar duas agora?</strong>
+                    <div class="answer"><strong>Nunca tome dose dupla.</strong> Isso pode causar uma sobrecarga perigosa e intoxicação imediata. Tome a dose esquecida assim que lembrar, mas se estiver muito perto da próxima, apenas pule a que esqueceu.</div>
+                </div>
+                <div class="didactic-card">
+                    <strong>Minha vizinha tomou este remédio e melhorou. Posso tomar também?</strong>
+                    <div class="answer"><strong>Não. Cada organismo é um universo.</strong> O que curou ela pode causar uma alergia fatal em você ou mascarar um problema mais sério que precisa de diagnóstico médico.</div>
+                </div>
+            </section>
+
+            <section id="proximos-passos" aria-labelledby="proximos-passos-heading">
+                <h2 id="proximos-passos-heading">📤 Vamos espalhar saúde?</h2>
+                <p>O conhecimento é a ferramenta mais poderosa de prevenção. Compartilhe este guia com sua família e amigos para que todos fiquem protegidos.</p>
+                <button class="btn" onclick="shareSite()" aria-label="Compartilhar este guia com a comunidade">📤 Compartilhar com a Comunidade</button>
+            </section>
+        </main>
+    </div>
+
+    <button class="floating-share" onclick="shareSite()" aria-label="Compartilhar" aria-hidden="false">📤</button>
+    <button id="back-to-top" class="back-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Voltar ao topo" aria-hidden="true">⬆️</button>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 Medicamentos Seguros. Educação que Transforma e Salva Vidas.</p>
+        <div class="authorship">
+            Este projeto foi desenvolvido por <strong>Sarah</strong><br>
+            Projeto de Extensão da disciplina de <strong>Saúde e Bem Estar</strong><br>
+            Universidade Católica de Brasília (<strong>UCB</strong>)<br>
+            <small>Última atualização: 02 de março de 2026</small>
+        </div>
+        <div class="footer-links">
+            <button onclick="openModal('terms-modal')">Termos de Uso</button>
+            <button onclick="openModal('privacy-modal')">Privacidade</button>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="terms-modal" class="modal" role="dialog" aria-labelledby="terms-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('terms-modal')" aria-label="Fechar">&times;</button>
+            <h2 id="terms-title">Termos de Uso</h2>
+            <p>Este portal tem caráter estritamente educativo e informativo. As orientações aqui contidas não substituem, em hipótese alguma, a consulta médica ou farmacêutica presencial.</p>
+            <p>A autora não se responsabiliza pelo uso indevido das informações. Em caso de dúvidas sobre sua saúde, procure sempre um profissional qualificado.</p>
+        </div>
+    </div>
+    <div id="privacy-modal" class="modal" role="dialog" aria-labelledby="privacy-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('privacy-modal')" aria-label="Fechar">&times;</button>
+            <h2 id="privacy-title">Privacidade</h2>
+            <p>Respeitamos sua privacidade. Este site não coleta, armazena ou compartilha nenhum dado pessoal dos usuários. A navegação é 100% anônima.</p>
+        </div>
+    </div>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalWebPage",
+        "name": "Medicamentos Seguros - Guia de Uso Racional",
+        "description": "Guia educativo sobre o uso seguro de medicamentos e os riscos da automedicação",
+        "url": "https://medicamentos-seguros.netlify.app",
+        "author": {
+            "@type": "Person",
+            "name": "Sarah",
+            "affiliation": {
+                "@type": "EducationalOrganization",
+                "name": "Universidade Católica de Brasília"
+            }
+        },
+        "datePublished": "2026-03-02",
+        "dateModified": "2026-03-02",
+        "mainEntity": {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "O remédio venceu faz apenas uma semana, ainda posso tomar?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Não. Após o vencimento, a estabilidade química não é garantida."
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+
+        if (localStorage.getItem('theme') === 'dark') { 
+            body.classList.add('dark-mode'); 
+            themeToggle.textContent = '☀️';
+            themeToggle.setAttribute('aria-pressed', 'true');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            themeToggle.textContent = isDark ? '☀️' : '🌙';
+            themeToggle.setAttribute('aria-pressed', isDark);
+        });
+
+        // Mobile Menu Toggle
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', sidebar.classList.contains('active'));
+        });
+
+        // Close sidebar when clicking a link
+        document.querySelectorAll('.sidebar a').forEach(link => {
+            link.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+                menuToggle.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Modal Functions
+        function openModal(modalId) { 
+            const modal = document.getElementById(modalId);
+            modal.style.display = "block"; 
+            modal.setAttribute('aria-hidden', 'false');
+            body.style.overflow = "hidden";
+            modal.focus();
+        }
+        function closeModal(modalId) { 
+            const modal = document.getElementById(modalId);
+            modal.style.display = "none"; 
+            modal.setAttribute('aria-hidden', 'true');
+            body.style.overflow = "auto";
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal').forEach(modal => {
+                    if (modal.style.display === 'block') closeModal(modal.id);
+                });
+            }
+        });
+
+        // Close modal when clicking outside
+        window.onclick = function(event) { 
+            if (event.target.className === 'modal') { 
+                closeModal(event.target.id); 
+            } 
+        }
+
+        // Smooth scroll navigation
+        document.querySelectorAll('.sidebar a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { 
+                    window.scrollTo({ top: target.offsetTop - 110, behavior: "smooth" }); 
+                }
+            });
+        });
+
+        // Share Function
+        async function shareSite() {
+            if (navigator.share) {
+                try { 
+                    await navigator.share({ 
+                        title: 'Medicamentos Seguros', 
+                        text: 'Guia educativo oficial sobre o uso seguro de medicamentos.', 
+                        url: window.location.href 
+                    }); 
+                } catch (err) {}
+            } else { 
+                navigator.clipboard.writeText(window.location.href); 
+                alert('Link copiado! ❤️'); 
+            }
+        }
+
+        // ScrollSpy and Back-to-Top
+        window.addEventListener('scroll', () => {
+            const backToTop = document.getElementById('back-to-top');
+            backToTop.style.display = window.pageYOffset > 400 ? 'flex' : 'none';
+            backToTop.setAttribute('aria-hidden', window.pageYOffset > 400 ? 'false' : 'true');
+
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            let current = "";
+            sections.forEach(section => { 
+                if (pageYOffset >= section.offsetTop - 120) current = section.getAttribute('id'); 
+            });
+            navLinks.forEach(link => { 
+                link.classList.remove('active'); 
+                if (link.getAttribute('href').includes(current)) link.classList.add('active'); 
+            });
+        });
+    </script>
+</body>
+</html>
