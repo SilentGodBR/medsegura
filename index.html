@@ -308,11 +308,11 @@
     </style>
 </head>
 <body id="top">
-    <header role="banner">
+    <header>
         <h1>💊 Medicamentos Seguros</h1>
         <div class="header-controls">
-            <button id="theme-toggle" class="icon-btn" aria-label="Alternar entre modo claro e escuro" aria-pressed="false">🌙</button>
-            <button id="menu-toggle" class="hamburger" aria-label="Abrir menu de navegação" aria-expanded="false">
+            <button id="theme-toggle" type="button" class="icon-btn" aria-label="Alternar entre modo claro e escuro" aria-pressed="false">🌙</button>
+            <button id="menu-toggle" type="button" class="hamburger" aria-label="Abrir menu de navegação" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -321,7 +321,7 @@
     </header>
 
     <div class="main-container">
-        <aside class="sidebar" id="sidebar" role="navigation" aria-label="Navegação principal">
+        <nav class="sidebar" id="sidebar" aria-label="Navegação principal">
             <h3>Navegação</h3>
             <ul>
                 <li><a href="#intro" class="nav-link">Por que cuidar?</a></li>
@@ -332,9 +332,9 @@
                 <li><a href="#faq" class="nav-link">Dúvidas Comuns</a></li>
                 <li><a href="#proximos-passos" class="nav-link">Como ajudar?</a></li>
             </ul>
-        </aside>
+        </nav>
 
-        <main class="content" id="main-content" role="main">
+        <main class="content" id="main-content">
             <div class="disclaimer" role="alert">
                 <span aria-hidden="true">❤️</span>
                 <p><strong>Cuidado com sua saúde:</strong> Este guia é educativo e focado no seu bem-estar. Se você estiver sentindo algo, procure um médico ou converse com o farmacêutico. Em emergências, ligue <strong>192 (SAMU)</strong>.</p>
@@ -527,15 +527,15 @@
             <section id="proximos-passos" aria-labelledby="proximos-passos-heading">
                 <h2 id="proximos-passos-heading">📤 Vamos espalhar saúde?</h2>
                 <p>O conhecimento é a ferramenta mais poderosa de prevenção. Compartilhe este guia com sua família e amigos para que todos fiquem protegidos.</p>
-                <button class="btn" onclick="shareSite()" aria-label="Compartilhar este guia com a comunidade">📤 Compartilhar com a Comunidade</button>
+                <button type="button" class="btn" onclick="shareSite()" aria-label="Compartilhar este guia com a comunidade">📤 Compartilhar com a Comunidade</button>
             </section>
         </main>
     </div>
 
-    <button class="floating-share" onclick="shareSite()" aria-label="Compartilhar" aria-hidden="false">📤</button>
-    <button id="back-to-top" class="back-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Voltar ao topo" aria-hidden="true">⬆️</button>
+    <button type="button" class="floating-share" onclick="shareSite()" aria-label="Compartilhar">📤</button>
+    <button type="button" id="back-to-top" class="back-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Voltar ao topo">⬆️</button>
 
-    <footer role="contentinfo">
+    <footer>
         <p>&copy; 2026 Medicamentos Seguros. Educação que Transforma e Salva Vidas.</p>
         <div class="authorship">
             Este projeto foi desenvolvido por <strong>Sarah</strong><br>
@@ -544,15 +544,15 @@
             <small>Última atualização: 02 de março de 2026</small>
         </div>
         <div class="footer-links">
-            <button onclick="openModal('terms-modal')">Termos de Uso</button>
-            <button onclick="openModal('privacy-modal')">Privacidade</button>
+            <button type="button" onclick="openModal('terms-modal')">Termos de Uso</button>
+            <button type="button" onclick="openModal('privacy-modal')">Privacidade</button>
         </div>
     </footer>
 
     <!-- Modals -->
     <div id="terms-modal" class="modal" role="dialog" aria-labelledby="terms-title" aria-hidden="true">
         <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('terms-modal')" aria-label="Fechar">&times;</button>
+            <button type="button" class="close-modal" onclick="closeModal('terms-modal')" aria-label="Fechar">&times;</button>
             <h2 id="terms-title">Termos de Uso</h2>
             <p>Este portal tem caráter estritamente educativo e informativo. As orientações aqui contidas não substituem, em hipótese alguma, a consulta médica ou farmacêutica presencial.</p>
             <p>A autora não se responsabiliza pelo uso indevido das informações. Em caso de dúvidas sobre sua saúde, procure sempre um profissional qualificado.</p>
@@ -560,7 +560,7 @@
     </div>
     <div id="privacy-modal" class="modal" role="dialog" aria-labelledby="privacy-title" aria-hidden="true">
         <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('privacy-modal')" aria-label="Fechar">&times;</button>
+            <button type="button" class="close-modal" onclick="closeModal('privacy-modal')" aria-label="Fechar">&times;</button>
             <h2 id="privacy-title">Privacidade</h2>
             <p>Respeitamos sua privacidade. Este site não coleta, armazena ou compartilha nenhum dado pessoal dos usuários. A navegação é 100% anônima.</p>
         </div>
