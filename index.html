@@ -8,32 +8,32 @@
     <meta name="author" content="Sarah - Universidade Católica de Brasília">
     <meta name="date" content="2026-03-02">
     <meta name="last-modified" content="2026-03-02">
-    
+
     <!-- Meta Tags para Redes Sociais -->
     <meta property="og:title" content="Medicamentos Seguros - Guia de Uso Racional (Sarah - UCB)">
     <meta property="og:description" content="Entenda os riscos da automedicação e aprenda a se medicar com segurança. Guia educativo oficial.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://medicamentos-seguros.netlify.app">
     <meta property="og:image" content="https://medicamentos-seguros.netlify.app/share-image.jpg">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Medicamentos Seguros - Guia de Uso Racional">
     <meta name="twitter:description" content="Educação em saúde que protege você e sua família.">
     <meta name="twitter:image" content="https://medicamentos-seguros.netlify.app/share-image.jpg">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://medicamentos-seguros.netlify.app">
-    
+
     <!-- Preconnect para Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>💊</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    
+
     <title>Medicamentos Seguros - Guia Didático e Humano | UCB</title>
-    
+
     <style>
         :root {
             --primary: #0052A3;
@@ -53,12 +53,12 @@
             --shadow-hover: 0 8px 24px rgba(0, 82, 163, 0.12);
             --bg-primary: #FFFFFF;
             --bg-secondary: #F9FAFB;
-            
+
             --faq-answer-bg: #F0F9FF;
             --faq-answer-text: #0369A1;
             --source-tip-bg: #EFF6FF;
             --source-tip-text: #1E40AF;
-            
+
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -128,8 +128,8 @@
 
         header h1 { font-family: 'Merriweather', serif; font-size: 1.4em; font-weight: 700; }
         .header-controls { display: flex; gap: 0.75rem; align-items: center; }
-        .icon-btn { 
-            background: rgba(255, 255, 255, 0.15); border: none; color: white; font-size: 1.2em; 
+        .icon-btn {
+            background: rgba(255, 255, 255, 0.15); border: none; color: white; font-size: 1.2em;
             cursor: pointer; padding: 0.5rem 0.75rem; border-radius: 6px; transition: var(--transition);
             display: flex; align-items: center; justify-content: center;
         }
@@ -143,29 +143,29 @@
         .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
 
         .main-container { display: flex; max-width: 1200px; margin: 0 auto; gap: 1.5rem; padding: 1.5rem; position: relative; }
-        
-        .sidebar { 
-            width: 280px; position: sticky; top: 100px; height: fit-content; 
-            background: var(--bg-primary); border-radius: 12px; padding: 1.5rem; 
-            box-shadow: var(--shadow); border: 1px solid var(--border-color); 
+
+        .sidebar {
+            width: 280px; position: sticky; top: 100px; height: fit-content;
+            background: var(--bg-primary); border-radius: 12px; padding: 1.5rem;
+            box-shadow: var(--shadow); border: 1px solid var(--border-color);
         }
         .sidebar h3 { color: var(--primary); font-size: 0.9em; margin-bottom: 1.125rem; text-transform: uppercase; letter-spacing: 1px; }
         .sidebar ul { list-style: none; }
-        .sidebar a { 
-            color: var(--text-primary); text-decoration: none; display: block; padding: 0.625rem 0.875rem; 
-            border-radius: 6px; transition: var(--transition); font-size: 0.95em; 
+        .sidebar a {
+            color: var(--text-primary); text-decoration: none; display: block; padding: 0.625rem 0.875rem;
+            border-radius: 6px; transition: var(--transition); font-size: 0.95em;
         }
         .sidebar a:hover { background: var(--primary-light); color: var(--primary); }
         .sidebar a:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
         .sidebar a.active { background: var(--primary); color: white; font-weight: 600; }
 
         .content { flex: 1; background: var(--bg-primary); border-radius: 12px; padding: 2.5rem; box-shadow: var(--shadow); border: 1px solid var(--border-color); }
-        
-        .disclaimer { 
-            background: rgba(245, 158, 11, 0.1); border-left: 6px solid var(--warning); 
+
+        .disclaimer {
+            background: rgba(245, 158, 11, 0.1); border-left: 6px solid var(--warning);
             padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 8px; display: flex; gap: 1rem; align-items: flex-start;
         }
-        
+
         section { margin-bottom: 4.375rem; scroll-margin-top: 110px; }
         h1 { font-family: 'Merriweather', serif; color: var(--primary); font-size: 2.2em; margin-bottom: 1.5rem; }
         h2 { font-family: 'Merriweather', serif; color: var(--primary); font-size: 1.8em; margin-bottom: 1.5rem; border-bottom: 3px solid var(--primary-light); padding-bottom: 0.625rem; }
@@ -177,20 +177,20 @@
         }
         .didactic-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
         .didactic-card strong { color: var(--primary); font-size: 1.1em; display: block; margin-bottom: 0.75rem; }
-        
-        .didactic-card .answer { 
-            background: var(--faq-answer-bg); 
-            color: var(--faq-answer-text); 
-            padding: 1.125rem 1.375rem; 
-            border-radius: 10px; 
-            margin-top: 1rem; 
-            font-weight: 500; 
+
+        .didactic-card .answer {
+            background: var(--faq-answer-bg);
+            color: var(--faq-answer-text);
+            padding: 1.125rem 1.375rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            font-weight: 500;
             border-left: 4px solid var(--info);
             box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
         }
 
-        .explanation { 
-            font-size: 0.95em; color: var(--text-secondary); margin-top: 1rem; 
+        .explanation {
+            font-size: 0.95em; color: var(--text-secondary); margin-top: 1rem;
             border-top: 1px solid var(--border-color); padding-top: 1rem; font-style: italic; display: flex; gap: 0.625rem;
         }
 
@@ -211,30 +211,30 @@
         tr:hover { background: var(--primary-light); }
 
         .sources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .source-card { 
-            background: var(--bg-secondary); padding: 1.875rem; border-radius: 16px; 
-            border-top: 5px solid var(--primary); box-shadow: var(--shadow); transition: var(--transition); 
+        .source-card {
+            background: var(--bg-secondary); padding: 1.875rem; border-radius: 16px;
+            border-top: 5px solid var(--primary); box-shadow: var(--shadow); transition: var(--transition);
             display: flex; flex-direction: column; justify-content: space-between;
         }
         .source-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
         .source-card h4 { color: var(--primary); margin-bottom: 0.75rem; font-family: 'Merriweather', serif; }
-        
-        .source-card .usage-tip { 
-            font-size: 0.88em; background: var(--source-tip-bg); color: var(--source-tip-text); 
+
+        .source-card .usage-tip {
+            font-size: 0.88em; background: var(--source-tip-bg); color: var(--source-tip-text);
             padding: 0.9375rem; border-radius: 10px; margin-bottom: 1.25rem; line-height: 1.6;
             border-left: 3px solid var(--primary);
         }
         .source-card .usage-tip strong { display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.8em; letter-spacing: 0.5px; }
 
-        .source-card a { 
-            display: block; color: var(--primary); font-weight: 600; padding: 0.75rem; 
+        .source-card a {
+            display: block; color: var(--primary); font-weight: 600; padding: 0.75rem;
             border: 2px solid var(--primary); border-radius: 8px; text-decoration: none; text-align: center; transition: var(--transition);
         }
         .source-card a:hover { background: var(--primary); color: white; }
         .source-card a:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 
-        .btn { 
-            display: inline-block; padding: 1rem 2.25rem; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); 
+        .btn {
+            display: inline-block; padding: 1rem 2.25rem; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white; border-radius: 12px; font-weight: 600; border: none; cursor: pointer; box-shadow: var(--shadow);
             transition: var(--transition);
         }
@@ -242,18 +242,18 @@
         .btn:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 
         .floating-share {
-            position: fixed; bottom: 30px; left: 30px; width: 60px; height: 60px; 
-            background: var(--success); color: white; border: none; border-radius: 50%; 
-            cursor: pointer; font-size: 1.5em; display: flex; align-items: center; justify-content: center; 
+            position: fixed; bottom: 30px; left: 30px; width: 60px; height: 60px;
+            background: var(--success); color: white; border: none; border-radius: 50%;
+            cursor: pointer; font-size: 1.5em; display: flex; align-items: center; justify-content: center;
             box-shadow: 0 8px 25px rgba(21, 128, 61, 0.4); z-index: 99; transition: var(--transition);
         }
         .floating-share:hover { transform: scale(1.1) translateY(-5px); }
         .floating-share:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 
-        .back-to-top { 
-            position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; 
-            background: var(--primary); color: white; border: none; border-radius: 50%; 
-            cursor: pointer; font-size: 1.5em; display: none; align-items: center; justify-content: center; 
+        .back-to-top {
+            position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px;
+            background: var(--primary); color: white; border: none; border-radius: 50%;
+            cursor: pointer; font-size: 1.5em; display: none; align-items: center; justify-content: center;
             box-shadow: var(--shadow); z-index: 99; transition: var(--transition);
         }
         .back-to-top:focus-visible { outline: 2px solid white; outline-offset: 2px; }
@@ -267,9 +267,9 @@
 
         .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); }
         .modal-content { background: var(--bg-primary); margin: 5% auto; padding: 2.5rem; border-radius: 20px; width: 90%; max-width: 750px; max-height: 85vh; overflow-y: auto; position: relative; }
-        .close-modal { 
-            position: absolute; top: 1.25rem; right: 1.5625rem; font-size: 30px; cursor: pointer; 
-            color: var(--text-secondary); background: none; border: none; transition: var(--transition); 
+        .close-modal {
+            position: absolute; top: 1.25rem; right: 1.5625rem; font-size: 30px; cursor: pointer;
+            color: var(--text-secondary); background: none; border: none; transition: var(--transition);
             padding: 0.5rem; border-radius: 6px; display: flex; align-items: center; justify-content: center;
         }
         .close-modal:hover { color: var(--primary); background: rgba(0, 82, 163, 0.1); }
@@ -282,9 +282,9 @@
         @media (max-width: 768px) {
             .hamburger { display: flex; }
             .main-container { flex-direction: column; padding: 1rem; gap: 1rem; }
-            .sidebar { 
-                display: none; position: fixed; top: 60px; left: 0; width: 100%; height: calc(100vh - 60px); 
-                border-radius: 0; z-index: 99; overflow-y: auto; background: var(--bg-primary); 
+            .sidebar {
+                display: none; position: fixed; top: 60px; left: 0; width: 100%; height: calc(100vh - 60px);
+                border-radius: 0; z-index: 99; overflow-y: auto; background: var(--bg-primary);
                 box-shadow: 2px 0 10px rgba(0,0,0,0.2); padding: 1.5rem; border: none;
             }
             .sidebar.active { display: block; }
@@ -352,19 +352,19 @@
             <section id="riscos" aria-labelledby="riscos-heading">
                 <h2 id="riscos-heading">🚨 Entendendo os Riscos (O que acontece no corpo?)</h2>
                 <p>O medicamento é uma ferramenta poderosa, mas deve ser usado com respeito. Entenda como a automedicação pode afetar seu organismo de forma profunda:</p>
-                
+
                 <div class="didactic-card">
                     <strong>Reações Alérgicas Inesperadas</strong>
                     <p>O seu corpo pode "estranhar" uma substância de repente, desencadeando uma resposta imunológica agressiva, mesmo que você já tenha tomado o remédio antes.</p>
                     <div class="explanation"><span aria-hidden="true">💡</span><p>Imagine o remédio como um "invasor" que seu corpo decide atacar por engano, causando desde manchas na pele até inchaços perigosos na garganta.</p></div>
                 </div>
-                
+
                 <div class="didactic-card">
                     <strong>Interações: A "Briga" entre Medicamentos</strong>
                     <p>Quando você mistura remédios por conta própria, um pode anular o efeito do outro ou, pior, potencializar a toxicidade no seu fígado e rins.</p>
                     <div class="explanation"><span aria-hidden="true">💡</span><p>É como misturar dois produtos químicos fortes: o resultado pode ser uma reação imprevista e prejudicial dentro do seu organismo.</p></div>
                 </div>
-                
+
                 <div class="didactic-card">
                     <strong>Resistência Bacteriana (Superbactérias)</strong>
                     <p>O uso inadequado de antibióticos "ensina" as bactérias a sobreviverem, tornando as doenças muito mais difíceis de tratar no futuro.</p>
@@ -375,7 +375,7 @@
             <section id="como-medicar" aria-labelledby="como-medicar-heading">
                 <h2 id="como-medicar-heading">✅ Dicas para uma Medicação Segura</h2>
                 <p>Pequenos hábitos garantem que o tratamento funcione como deveria. Siga estas orientações fundamentais:</p>
-                
+
                 <div class="tip-list">
                     <div class="tip-item"><div class="tip-icon" aria-hidden="true">💧</div><div class="tip-text"><strong>Água é a melhor amiga:</strong> Tome remédios sempre com um copo cheio de água. Leite, sucos, refrigerantes ou café podem reagir com a fórmula e impedir a absorção correta pelo sangue.</div></div>
                     <div class="tip-item"><div class="tip-icon" aria-hidden="true">💊</div><div class="tip-text"><strong>Não parta o comprimido:</strong> A menos que ele tenha o sulco (aquela marca de corte no meio). Sem o sulco, a substância não é distribuída igualmente, e você pode tomar uma dose errada.</div></div>
@@ -389,7 +389,7 @@
                 <h2 id="interacoes-heading">⚠️ Misturas que você deve evitar</h2>
                 <p>Algumas combinações são extremamente perigosas. Confira os exemplos mais comuns que exigem atenção redobrada:</p>
                 <div class="table-container">
-                    <table role="table">
+                    <table>
                         <caption>Combinações perigosas de medicamentos e seus efeitos</caption>
                         <thead>
                             <tr>
@@ -550,7 +550,7 @@
     </footer>
 
     <!-- Modals -->
-    <div id="terms-modal" class="modal" role="dialog" aria-labelledby="terms-title" aria-hidden="true">
+    <div id="terms-modal" class="modal" role="dialog" aria-labelledby="terms-title">
         <div class="modal-content">
             <button type="button" class="close-modal" onclick="closeModal('terms-modal')" aria-label="Fechar">&times;</button>
             <h2 id="terms-title">Termos de Uso</h2>
@@ -558,7 +558,7 @@
             <p>A autora não se responsabiliza pelo uso indevido das informações. Em caso de dúvidas sobre sua saúde, procure sempre um profissional qualificado.</p>
         </div>
     </div>
-    <div id="privacy-modal" class="modal" role="dialog" aria-labelledby="privacy-title" aria-hidden="true">
+    <div id="privacy-modal" class="modal" role="dialog" aria-labelledby="privacy-title">
         <div class="modal-content">
             <button type="button" class="close-modal" onclick="closeModal('privacy-modal')" aria-label="Fechar">&times;</button>
             <h2 id="privacy-title">Privacidade</h2>
@@ -607,8 +607,8 @@
         const menuToggle = document.getElementById('menu-toggle');
         const sidebar = document.getElementById('sidebar');
 
-        if (localStorage.getItem('theme') === 'dark') { 
-            body.classList.add('dark-mode'); 
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
             themeToggle.textContent = '☀️';
             themeToggle.setAttribute('aria-pressed', 'true');
         }
@@ -638,16 +638,16 @@
         });
 
         // Modal Functions
-        function openModal(modalId) { 
+        function openModal(modalId) {
             const modal = document.getElementById(modalId);
-            modal.style.display = "block"; 
+            modal.style.display = "block";
             modal.setAttribute('aria-hidden', 'false');
             body.style.overflow = "hidden";
             modal.focus();
         }
-        function closeModal(modalId) { 
+        function closeModal(modalId) {
             const modal = document.getElementById(modalId);
-            modal.style.display = "none"; 
+            modal.style.display = "none";
             modal.setAttribute('aria-hidden', 'true');
             body.style.overflow = "auto";
         }
@@ -662,10 +662,10 @@
         });
 
         // Close modal when clicking outside
-        window.onclick = function(event) { 
-            if (event.target.className === 'modal') { 
-                closeModal(event.target.id); 
-            } 
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                closeModal(event.target.id);
+            }
         }
 
         // Smooth scroll navigation
@@ -673,8 +673,8 @@
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) { 
-                    window.scrollTo({ top: target.offsetTop - 110, behavior: "smooth" }); 
+                if (target) {
+                    window.scrollTo({ top: target.offsetTop - 110, behavior: "smooth" });
                 }
             });
         });
@@ -682,16 +682,16 @@
         // Share Function
         async function shareSite() {
             if (navigator.share) {
-                try { 
-                    await navigator.share({ 
-                        title: 'Medicamentos Seguros', 
-                        text: 'Guia educativo oficial sobre o uso seguro de medicamentos.', 
-                        url: window.location.href 
-                    }); 
+                try {
+                    await navigator.share({
+                        title: 'Medicamentos Seguros',
+                        text: 'Guia educativo oficial sobre o uso seguro de medicamentos.',
+                        url: window.location.href
+                    });
                 } catch (err) {}
-            } else { 
-                navigator.clipboard.writeText(window.location.href); 
-                alert('Link copiado! ❤️'); 
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert('Link copiado! ❤️');
             }
         }
 
@@ -704,12 +704,12 @@
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-link');
             let current = "";
-            sections.forEach(section => { 
-                if (pageYOffset >= section.offsetTop - 120) current = section.getAttribute('id'); 
+            sections.forEach(section => {
+                if (pageYOffset >= section.offsetTop - 120) current = section.getAttribute('id');
             });
-            navLinks.forEach(link => { 
-                link.classList.remove('active'); 
-                if (link.getAttribute('href').includes(current)) link.classList.add('active'); 
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) link.classList.add('active');
             });
         });
     </script>
