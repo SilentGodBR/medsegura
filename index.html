@@ -150,11 +150,16 @@
             top: 0;
             left: 0;
             height: 3px;
-            width: 0%;
-            background: linear-gradient(90deg, var(--warning), var(--danger));
+            width: 100%;
+            background: transparent;
             z-index: 101;
-            transition: width 0.1s linear;
+            border: none;
+            appearance: none;
+            -webkit-appearance: none;
         }
+        #reading-progress::-webkit-progress-bar { background: transparent; }
+        #reading-progress::-webkit-progress-value { background: linear-gradient(90deg, var(--warning), var(--danger)); transition: width 0.1s linear; }
+        #reading-progress::-moz-progress-bar { background: linear-gradient(90deg, var(--warning), var(--danger)); transition: width 0.1s linear; }
 
         header {
             position: sticky; top: 0; z-index: 100;
@@ -417,6 +422,7 @@
             width: 90%; max-width: 750px; max-height: 85vh; overflow-y: auto; position: relative;
         }
         .modal-content h2 { border-bottom: none; }
+        .modal-disclaimer { margin-top: 1rem; }
         .close-modal {
             position: absolute; top: 1.25rem; right: 1.5625rem; font-size: 30px; cursor: pointer;
             color: var(--text-secondary); background: none; border: none; transition: var(--transition);
@@ -503,7 +509,7 @@
 <body id="top">
 
     <!-- Barra de progresso de leitura -->
-    <div id="reading-progress" role="progressbar" aria-label="Progresso de leitura" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    <progress id="reading-progress" aria-label="Progresso de leitura" value="0" max="100"></progress>
 
     <header>
         <h1><span aria-hidden="true">💊</span> Medicamentos Seguros</h1>
@@ -800,7 +806,7 @@
     <button type="button" class="floating-share" onclick="shareSite()" aria-label="Compartilhar este guia">
         <span aria-hidden="true">📤</span>
     </button>
-    <button type="button" id="back-to-top" class="back-to-top" aria-label="Voltar ao topo" aria-hidden="true">
+    <button type="button" id="back-to-top" class="back-to-top" aria-label="Voltar ao topo" inert>
         <span aria-hidden="true">⬆️</span>
     </button>
 
@@ -824,7 +830,7 @@
             <button type="button" class="close-modal" onclick="closeModal('terms-modal')" aria-label="Fechar modal de Termos de Uso">&times;</button>
             <h2 id="terms-title">Termos de Uso</h2>
             <p>Este portal tem caráter estritamente educativo e informativo. As orientações aqui contidas não substituem, em hipótese alguma, a consulta médica ou farmacêutica presencial.</p>
-            <p style="margin-top: 1rem;">A autora não se responsabiliza pelo uso indevido das informações. Em caso de dúvidas sobre sua saúde, procure sempre um profissional qualificado.</p>
+            <p class="modal-disclaimer">A autora não se responsabiliza pelo uso indevido das informações. Em caso de dúvidas sobre sua saúde, procure sempre um profissional qualificado.</p>
         </div>
     </div>
     <div id="privacy-modal" class="modal" role="dialog" aria-labelledby="privacy-title" aria-hidden="true" aria-modal="true">
@@ -1028,16 +1034,15 @@
             const scrollTop    = window.pageYOffset;
             const docHeight    = document.body.scrollHeight - window.innerHeight;
             const progress     = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-            progressBar.style.width = progress + '%';
-            progressBar.setAttribute('aria-valuenow', Math.round(progress));
+            progressBar.value = Math.round(progress);
 
             // Back to top
             if (scrollTop > 400) {
                 backToTop.style.display = 'flex';
-                backToTop.setAttribute('aria-hidden', 'false');
+                backToTop.removeAttribute('inert');
             } else {
                 backToTop.style.display = 'none';
-                backToTop.setAttribute('aria-hidden', 'true');
+                backToTop.setAttribute('inert', '');
             }
 
             // ScrollSpy
