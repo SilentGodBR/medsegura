@@ -3,981 +3,1345 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guia didático sobre o uso seguro de medicamentos. Entenda os riscos da automedicação de forma simples e proteja sua saúde com fontes confiáveis.">
-    <meta name="keywords" content="automedicação, saúde didática, medicamentos seguros, riscos, ANVISA, OMS, educação em saúde, Brasil">
-    <meta name="author" content="Sarah - Universidade Católica de Brasília">
-    <meta name="date" content="2026-03-02">
-    <meta name="last-modified" content="2026-03-02">
 
-    <!-- Meta Tags para Redes Sociais (URLs corrigidas) -->
-    <meta property="og:title" content="Medicamentos Seguros - Guia de Uso Racional (Sarah - UCB)">
-    <meta property="og:description" content="Entenda os riscos da automedicação e aprenda a se medicar com segurança. Guia educativo oficial.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://medsegura.netlify.app">
-    <meta property="og:image" content="https://medsegura.netlify.app/share-image.jpg">
-    <meta property="og:locale" content="pt_BR">
-    <meta property="og:site_name" content="Medicamentos Seguros">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Medicamentos Seguros - Guia de Uso Racional">
-    <meta name="twitter:description" content="Educação em saúde que protege você e sua família.">
-    <meta name="twitter:image" content="https://medsegura.netlify.app/share-image.jpg">
-
-    <!-- Canonical URL (corrigida) -->
+    <!-- ── SEO principal ── -->
+    <title>Medicamentos Seguros — Guia de Uso Racional | Sarah · UCB</title>
+    <meta name="description" content="Guia educativo sobre os riscos da automedicação no Brasil. Aprenda a usar medicamentos com segurança, onde pesquisar informações confiáveis e como proteger sua família.">
+    <meta name="keywords" content="automedicação, uso racional de medicamentos, ANVISA, riscos remédios, saúde, UCB, educação em saúde">
+    <meta name="author" content="Sarah — Universidade Católica de Brasília (UCB)">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://medsegura.netlify.app">
 
-    <!-- Preconnect para Google Fonts -->
+    <!-- ── Open Graph ── -->
+    <meta property="og:type"        content="website">
+    <meta property="og:url"         content="https://medsegura.netlify.app">
+    <meta property="og:title"       content="Medicamentos Seguros — Guia de Uso Racional">
+    <meta property="og:description" content="Entenda os riscos da automedicação e aprenda a se medicar com segurança. Guia educativo da UCB com fontes oficiais verificadas.">
+    <meta property="og:image"       content="https://medsegura.netlify.app/share-image.jpg">
+    <meta property="og:image:alt"   content="Cápsula de medicamento com texto Medicamentos Seguros — UCB">
+    <meta property="og:locale"      content="pt_BR">
+    <meta property="og:site_name"   content="Medicamentos Seguros">
+
+    <!-- ── Twitter Card ── -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Medicamentos Seguros — Guia de Uso Racional">
+    <meta name="twitter:description" content="Educação em saúde que protege você e sua família. Guia UCB com fontes oficiais.">
+    <meta name="twitter:image"       content="https://medsegura.netlify.app/share-image.jpg">
+
+    <!-- ── Fontes ── -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>💊</text></svg>">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-
-    <title>Medicamentos Seguros - Guia Didático e Humano | UCB</title>
 
     <style>
+        /* ════════════════════════════════════════
+           1. TOKENS DE DESIGN
+        ════════════════════════════════════════ */
         :root {
-            --primary: #0052A3;
-            --primary-dark: #003D7A;
-            --primary-light: #E8F1FF;
-            --success: #15803D;
-            --success-light: #DCFCE7;
-            --warning: #F59E0B;
-            --danger: #DC2626;
-            --info: #0369A1;
-            --neutral-dark: #1F2937;
-            --neutral-light: #F3F4F6;
-            --text-primary: #111827;
-            --text-secondary: #374151;
-            --border-color: #E5E7EB;
-            --shadow: 0 4px 12px rgba(0, 82, 163, 0.08);
-            --shadow-hover: 0 8px 24px rgba(0, 82, 163, 0.12);
-            --bg-primary: #FFFFFF;
-            --bg-secondary: #F9FAFB;
+            /* Cores */
+            --primary:        #0052A3;
+            --primary-dark:   #003D7A;
+            --primary-light:  #E8F1FF;
+            --success:        #15803D;
+            --warning:        #D97706;
+            --danger:         #DC2626;
+            --info:           #0369A1;
 
-            --faq-answer-bg: #F0F9FF;
-            --faq-answer-text: #0369A1;
-            --source-tip-bg: #EFF6FF;
-            --source-tip-text: #1E40AF;
+            /* Texto */
+            --text-primary:   #111827;
+            --text-secondary: #4B5563;
+            --text-muted:     #6B7280;
 
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            /* Superfícies */
+            --bg-page:        #F3F4F6;
+            --bg-card:        #FFFFFF;
+            --bg-subtle:      #F9FAFB;
+            --border:         #E5E7EB;
+
+            /* Sombras */
+            --shadow-sm:  0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
+            --shadow-md:  0 4px 12px rgba(0,82,163,.08);
+            --shadow-lg:  0 8px 24px rgba(0,82,163,.13);
+
+            /* Tipografia */
+            --font-body:    'Inter', system-ui, sans-serif;
+            --font-display: 'Merriweather', Georgia, serif;
+            --text-xs:   .75rem;
+            --text-sm:   .875rem;
+            --text-base: 1rem;
+            --text-lg:   1.125rem;
+            --text-xl:   1.25rem;
+            --text-2xl:  1.5rem;
+            --text-3xl:  1.875rem;
+            --leading-tight:  1.25;
+            --leading-normal: 1.6;
+            --leading-loose:  1.8;
+
+            /* FAQ / Source tips */
+            --faq-bg:       #F0F9FF;
+            --faq-text:     #0369A1;
+            --tip-bg:       #EFF6FF;
+            --tip-text:     #1E40AF;
+
+            --transition: all .28s cubic-bezier(.4,0,.2,1);
         }
 
+        /* Dark mode */
         body.dark-mode {
-            --text-primary: #F3F4F6;
+            --text-primary:   #F3F4F6;
             --text-secondary: #D1D5DB;
-            --bg-primary: #111827;
-            --bg-secondary: #1F2937;
-            --border-color: #374151;
-            --primary-light: rgba(0, 82, 163, 0.3);
-            --faq-answer-bg: #0C4A6E;
-            --faq-answer-text: #BAE6FD;
-            --source-tip-bg: #1E3A8A;
-            --source-tip-text: #DBEAFE;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-            --disclaimer-bg: #7C2D12;
-            --disclaimer-text: #FECACA;
-            --alert-info-bg: #0C4A6E;
-            --alert-info-text: #BAE6FD;
-            --alert-danger-bg: #7C2D12;
-            --alert-danger-text: #FECACA;
+            --text-muted:     #9CA3AF;
+            --bg-page:        #0F172A;
+            --bg-card:        #1E293B;
+            --bg-subtle:      #1E293B;
+            --border:         #334155;
+            --primary-light:  rgba(0,82,163,.25);
+            --faq-bg:         #0C4A6E;
+            --faq-text:       #BAE6FD;
+            --tip-bg:         #1E3A8A;
+            --tip-text:       #DBEAFE;
+            --shadow-md:      0 4px 12px rgba(0,0,0,.4);
+            --shadow-lg:      0 8px 24px rgba(0,0,0,.5);
         }
+        body.dark-mode .disclaimer        { background:rgba(120,53,15,.35); border-color:#D97706; }
+        body.dark-mode .stat-card         { background:rgba(220,38,38,.15); border-color:rgba(220,38,38,.4); }
+        body.dark-mode .faq-item          { background:var(--bg-subtle); border-color:var(--border); }
+        body.dark-mode .faq-item summary  { color:var(--text-primary); }
+        body.dark-mode .faq-answer        { background:var(--faq-bg); color:var(--faq-text); border-color:#0EA5E9; }
+        body.dark-mode tr:hover           { background:var(--primary-light); }
 
-        body.dark-mode .disclaimer {
-            background: var(--disclaimer-bg);
-            color: var(--disclaimer-text);
-            border-color: #DC2626;
-        }
-
-        body.dark-mode .alert-info {
-            background: var(--alert-info-bg);
-            color: var(--alert-info-text);
-            border-color: #0EA5E9;
-        }
-
-        body.dark-mode .alert-danger {
-            background: var(--alert-danger-bg);
-            color: var(--alert-danger-text);
-            border-color: #DC2626;
-        }
-
-        body.dark-mode .alert strong { color: inherit; }
-
-        /* Stat card no dark mode */
-        body.dark-mode .stat-card {
-            background: rgba(220, 38, 38, 0.2);
-            border-color: rgba(220, 38, 38, 0.5);
-        }
-
-        /* FAQ accordion no dark mode */
-        body.dark-mode .faq-item {
-            background: var(--bg-secondary);
-            border-color: var(--border-color);
-        }
-        body.dark-mode .faq-item summary {
-            color: var(--text-primary);
-        }
-        body.dark-mode .faq-answer {
-            background: var(--faq-answer-bg);
-            color: var(--faq-answer-text);
-            border-color: #0EA5E9;
-        }
-
+        /* Reduced motion */
         @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
+            *, *::before, *::after {
+                animation-duration: .01ms !important;
+                transition-duration: .01ms !important;
             }
-            .card-animate { opacity: 1 !important; transform: none !important; }
+            html { scroll-behavior: auto; }
+            .card-animate { opacity:1 !important; transform:none !important; }
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        /* ════════════════════════════════════════
+           2. RESET + BASE
+        ════════════════════════════════════════ */
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            /* Evita "scroll preso" em iOS/Safari */
+            -webkit-overflow-scrolling: touch;
+            overflow-x: hidden;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.7;
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            line-height: var(--leading-loose);
             color: var(--text-primary);
-            background-color: var(--bg-secondary);
+            background: var(--bg-page);
             min-height: 100vh;
-            transition: var(--transition);
+            transition: background .3s, color .3s;
+            /* Evita rolagem presa ao abrir modal */
+            overscroll-behavior: contain;
         }
 
-        /* ── Barra de progresso de leitura ── */
+        /* ════════════════════════════════════════
+           3. BARRA DE PROGRESSO
+        ════════════════════════════════════════ */
         #reading-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 3px;
-            width: 100%;
+            position: fixed; top:0; left:0;
+            height: 3px; width:100%;
             background: transparent;
-            z-index: 101;
+            z-index: 200;
             border: none;
             appearance: none;
             -webkit-appearance: none;
         }
-        #reading-progress::-webkit-progress-bar { background: transparent; }
-        #reading-progress::-webkit-progress-value { background: linear-gradient(90deg, var(--warning), var(--danger)); transition: width 0.1s linear; }
-        #reading-progress::-moz-progress-bar { background: linear-gradient(90deg, var(--warning), var(--danger)); transition: width 0.1s linear; }
+        #reading-progress::-webkit-progress-bar   { background: transparent; }
+        #reading-progress::-webkit-progress-value { background: linear-gradient(90deg,var(--warning),var(--danger)); }
+        #reading-progress::-moz-progress-bar      { background: linear-gradient(90deg,var(--warning),var(--danger)); }
 
+        /* ════════════════════════════════════════
+           4. HEADER
+        ════════════════════════════════════════ */
         header {
-            position: sticky; top: 0; z-index: 100;
+            position: sticky; top:0; z-index:100;
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white; padding: 1rem 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            color: white;
+            padding: .875rem 1.25rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,.18);
             display: flex; justify-content: space-between; align-items: center;
+            gap: 1rem;
         }
-
-        header h1 { font-family: 'Merriweather', serif; font-size: 1.4em; font-weight: 700; }
-        .header-controls { display: flex; gap: 0.75rem; align-items: center; }
+        header h1 {
+            font-family: var(--font-display);
+            font-size: clamp(1rem, 2.5vw, 1.35rem);
+            font-weight: 700;
+            line-height: var(--leading-tight);
+        }
+        .header-controls { display:flex; gap:.625rem; align-items:center; flex-shrink:0; }
         .icon-btn {
-            background: rgba(255, 255, 255, 0.15); border: none; color: white; font-size: 1.2em;
-            cursor: pointer; padding: 0.5rem 0.75rem; border-radius: 6px; transition: var(--transition);
-            display: flex; align-items: center; justify-content: center;
+            background: rgba(255,255,255,.15);
+            border: 1px solid rgba(255,255,255,.2);
+            color: white;
+            font-size: 1.15em;
+            cursor: pointer;
+            padding: .45rem .7rem;
+            border-radius: 8px;
+            transition: var(--transition);
+            display: flex; align-items:center; justify-content:center;
+            line-height: 1;
         }
-        .icon-btn:hover { background: rgba(255, 255, 255, 0.25); transform: translateY(-2px); }
-        .icon-btn:focus-visible { outline: 2px solid white; outline-offset: 2px; }
+        .icon-btn:hover  { background:rgba(255,255,255,.28); transform:translateY(-1px); }
+        .icon-btn:focus-visible { outline:3px solid white; outline-offset:2px; }
 
-        .hamburger { display: none; flex-direction: column; gap: 5px; width: 30px; height: 24px; cursor: pointer; background: none; border: none; padding: 0; }
-        .hamburger span { width: 100%; height: 3px; background: white; border-radius: 2px; transition: var(--transition); }
-        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
-        .hamburger.active span:nth-child(2) { opacity: 0; }
-        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+        .hamburger {
+            display: none;
+            flex-direction: column; gap:5px;
+            width:30px; height:22px;
+            cursor:pointer; background:none; border:none; padding:0;
+            align-items: center; justify-content: center;
+        }
+        .hamburger span { width:100%; height:2.5px; background:white; border-radius:2px; transition:var(--transition); display:block; }
+        .hamburger.active span:nth-child(1) { transform:rotate(45deg) translate(6px,6px); }
+        .hamburger.active span:nth-child(2) { opacity:0; transform:scaleX(0); }
+        .hamburger.active span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
 
-        .main-container { display: flex; max-width: 1200px; margin: 0 auto; gap: 1.5rem; padding: 1.5rem; position: relative; }
+        /* ════════════════════════════════════════
+           5. LAYOUT
+        ════════════════════════════════════════ */
+        .main-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 1.5rem;
+            padding: 1.75rem 1.5rem;
+            position: relative;
+        }
 
+        /* ── Sidebar ── */
         .sidebar {
-            width: 280px; position: sticky; top: 100px; height: fit-content;
-            background: var(--bg-primary); border-radius: 12px; padding: 1.5rem;
-            box-shadow: var(--shadow); border: 1px solid var(--border-color);
+            width: 270px;
+            position: sticky; top:80px;
+            height: fit-content;
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+            flex-shrink: 0;
         }
         .sidebar-label {
-            color: var(--primary); font-size: 0.9em; margin-bottom: 1.125rem;
-            text-transform: uppercase; letter-spacing: 1px; font-weight: 700;
             display: block;
+            color: var(--primary);
+            font-size: var(--text-xs);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 1rem;
         }
-        .sidebar ul { list-style: none; }
+        .sidebar ul { list-style:none; }
         .sidebar a {
-            color: var(--text-primary); text-decoration: none; display: block; padding: 0.625rem 0.875rem;
-            border-radius: 6px; transition: var(--transition); font-size: 0.95em;
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: .55rem .875rem;
+            border-radius: 8px;
+            font-size: var(--text-sm);
+            font-weight: 500;
+            transition: var(--transition);
+            border-left: 3px solid transparent;
         }
-        .sidebar a:hover { background: var(--primary-light); color: var(--primary); }
-        .sidebar a:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
-        .sidebar a.active { background: var(--primary); color: white; font-weight: 600; }
+        .sidebar a:hover        { background:var(--primary-light); color:var(--primary); border-left-color:var(--primary); }
+        .sidebar a:focus-visible { outline:2px solid var(--primary); outline-offset:2px; }
+        .sidebar a.active       { background:var(--primary); color:white; font-weight:600; border-left-color:transparent; }
 
-        .content { flex: 1; background: var(--bg-primary); border-radius: 12px; padding: 2.5rem; box-shadow: var(--shadow); border: 1px solid var(--border-color); }
-
-        .disclaimer {
-            background: rgba(245, 158, 11, 0.1); border-left: 6px solid var(--warning);
-            padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 8px; display: flex; gap: 1rem; align-items: flex-start;
-        }
-
-        section { margin-bottom: 4.375rem; scroll-margin-top: 110px; }
-        h2 { font-family: 'Merriweather', serif; color: var(--primary); font-size: 1.8em; margin-bottom: 1.5rem; border-bottom: 3px solid var(--primary-light); padding-bottom: 0.625rem; }
-        h3 { font-family: 'Merriweather', serif; color: var(--primary-dark); font-size: 1.3em; margin-top: 1.875rem; margin-bottom: 1rem; }
-
-        /* ── Hero / Intro ── */
-        .hero-intro {
-            margin-bottom: 2rem;
-        }
-        .hero-intro > p { font-size: 1.05em; margin-bottom: 1.5rem; }
-
-        /* Stat card animado */
-        .stat-card {
-            display: flex;
-            align-items: center;
-            gap: 1.25rem;
-            background: rgba(220, 38, 38, 0.07);
-            border: 2px solid rgba(220, 38, 38, 0.2);
+        /* ── Content area ── */
+        .content {
+            flex: 1;
+            min-width: 0;
+            background: var(--bg-card);
             border-radius: 14px;
+            padding: 2.5rem 2.75rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+        }
+
+        /* ════════════════════════════════════════
+           6. TIPOGRAFIA DE CONTEÚDO
+        ════════════════════════════════════════ */
+        .content p   { margin-bottom: 1rem; color: var(--text-secondary); line-height: var(--leading-loose); }
+        .content p:last-child { margin-bottom: 0; }
+
+        section { margin-bottom: 4.5rem; scroll-margin-top: 100px; }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.35rem, 3vw, 1.8rem);
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            line-height: var(--leading-tight);
+            padding-bottom: .75rem;
+            border-bottom: 3px solid var(--primary-light);
+        }
+        h3 {
+            font-family: var(--font-display);
+            font-size: var(--text-xl);
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin: 1.75rem 0 .875rem;
+            line-height: var(--leading-tight);
+        }
+
+        /* ════════════════════════════════════════
+           7. COMPONENTES
+        ════════════════════════════════════════ */
+
+        /* Aviso no topo */
+        .disclaimer {
+            background: rgba(217,119,6,.1);
+            border-left: 5px solid var(--warning);
+            padding: 1.125rem 1.5rem;
+            margin-bottom: 2.25rem;
+            border-radius: 10px;
+            display: flex; gap:.875rem; align-items:flex-start;
+            font-size: var(--text-sm);
+        }
+        .disclaimer p { color:var(--text-primary); margin:0; }
+
+        /* Stat card */
+        .stat-card {
+            display: flex; align-items:center; gap:1.5rem;
+            background: rgba(220,38,38,.06);
+            border: 2px solid rgba(220,38,38,.18);
+            border-radius: 16px;
             padding: 1.5rem 2rem;
-            margin: 1.5rem 0;
+            margin: 1.75rem 0;
         }
         .stat-number {
-            font-family: 'Merriweather', serif;
-            font-size: 2.8em;
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 2.8rem);
             font-weight: 700;
             color: var(--danger);
             line-height: 1;
             white-space: nowrap;
         }
-        .stat-label {
-            font-size: 1em;
-            color: var(--text-secondary);
-            line-height: 1.5;
-        }
-        .stat-label strong { color: var(--danger); display: block; font-size: 1.05em; }
+        .stat-label { font-size: var(--text-sm); color:var(--text-secondary); line-height:1.5; }
+        .stat-label strong { color:var(--danger); display:block; font-size:var(--text-base); margin-bottom:.25rem; }
 
-        /* ── Cards didáticos ── */
+        /* Cards didáticos */
         .didactic-card {
-            background: var(--bg-secondary); border-radius: 12px; padding: 1.75rem; margin: 1.5rem 0;
-            border-left: 6px solid var(--primary); box-shadow: var(--shadow); transition: var(--transition);
+            background: var(--bg-subtle);
+            border-radius: 14px;
+            padding: 1.625rem;
+            margin: 1.5rem 0;
+            border-left: 5px solid var(--primary);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
         }
-        .didactic-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
-        .didactic-card strong { color: var(--primary); font-size: 1.1em; display: block; margin-bottom: 0.75rem; }
-
-        .didactic-card .answer {
-            background: var(--faq-answer-bg);
-            color: var(--faq-answer-text);
-            padding: 1.125rem 1.375rem;
-            border-radius: 10px;
-            margin-top: 1rem;
-            font-weight: 500;
-            border-left: 4px solid var(--info);
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
-        }
-
+        .didactic-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-md); }
+        .didactic-card > strong { color:var(--primary); font-size:var(--text-lg); display:block; margin-bottom:.75rem; }
         .explanation {
-            font-size: 0.95em; color: var(--text-secondary); margin-top: 1rem;
-            border-top: 1px solid var(--border-color); padding-top: 1rem; font-style: italic; display: flex; gap: 0.625rem;
+            font-size: var(--text-sm);
+            color: var(--text-muted);
+            margin-top: 1rem;
+            border-top: 1px solid var(--border);
+            padding-top: 1rem;
+            font-style: italic;
+            display: flex; gap:.5rem; align-items:flex-start;
         }
+        .explanation p { margin:0; color:var(--text-muted); }
 
-        .alert { padding: 1.5rem; border-radius: 12px; border-left: 6px solid; margin: 1.5rem 0; display: flex; flex-direction: column; gap: 0.625rem; }
-        .alert-info { background: rgba(3, 105, 161, 0.1); border-color: var(--info); }
-        .alert-danger { background: rgba(220, 38, 38, 0.1); border-color: var(--danger); }
-
-        .tip-list { list-style: none; margin: 1.5rem 0; }
-        .tip-item { display: flex; gap: 1rem; margin-bottom: 1.25rem; align-items: flex-start; }
-        .tip-icon { font-size: 1.5em; min-width: 30px; }
-        .tip-text strong { color: var(--primary); }
-
-        /* ── Tabela responsiva ── */
-        .table-container { overflow-x: auto; margin: 1.5rem 0; border-radius: 12px; box-shadow: var(--shadow); }
-        table { width: 100%; border-collapse: collapse; background: var(--bg-primary); }
-        table caption { text-align: left; padding: 1rem; font-weight: 600; color: var(--primary); }
-        th { background: var(--primary); color: white; padding: 1.125rem; text-align: left; }
-        td { padding: 1rem; border-bottom: 1px solid var(--border-color); font-size: 0.95em; }
-        tr:hover { background: var(--primary-light); }
-
-        /* ── Cards de fontes ── */
-        .sources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .source-card {
-            background: var(--bg-secondary); padding: 1.875rem; border-radius: 16px;
-            border-top: 5px solid var(--primary); box-shadow: var(--shadow); transition: var(--transition);
-            display: flex; flex-direction: column; justify-content: space-between;
-        }
-        .source-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
-        .source-card h3 { color: var(--primary); margin-bottom: 0.75rem; font-family: 'Merriweather', serif; margin-top: 0; }
-
-        .source-card .usage-tip {
-            font-size: 0.88em; background: var(--source-tip-bg); color: var(--source-tip-text);
-            padding: 0.9375rem; border-radius: 10px; margin-bottom: 1.25rem; line-height: 1.6;
-            border-left: 3px solid var(--primary);
-        }
-        .source-card .usage-tip strong { display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.8em; letter-spacing: 0.5px; }
-
-        .source-card a {
-            display: block; color: var(--primary); font-weight: 600; padding: 0.75rem;
-            border: 2px solid var(--primary); border-radius: 8px; text-decoration: none; text-align: center; transition: var(--transition);
-        }
-        .source-card a:hover { background: var(--primary); color: white; }
-        .source-card a:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
-
-        /* ── FAQ Accordion (details/summary) ── */
-        .faq-item {
-            background: var(--bg-secondary);
+        /* Lista de dicas */
+        .tip-list { list-style:none; margin:1.5rem 0; display:flex; flex-direction:column; gap:1.125rem; }
+        .tip-item {
+            display: flex; gap:1rem; align-items:flex-start;
+            background: var(--bg-subtle);
             border-radius: 12px;
-            border: 1px solid var(--border-color);
-            border-left: 6px solid var(--primary);
-            margin: 1rem 0;
-            box-shadow: var(--shadow);
+            padding: 1.125rem 1.25rem;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+        .tip-item:hover { box-shadow:var(--shadow-sm); transform:translateX(3px); }
+        .tip-icon { font-size:1.4em; min-width:28px; line-height:1.5; }
+        .tip-text { font-size:var(--text-sm); line-height:var(--leading-loose); color:var(--text-secondary); }
+        .tip-text strong { color:var(--primary); display:block; margin-bottom:.2rem; font-size:var(--text-base); }
+
+        /* ── Tabela / Cards de interações ── */
+        .interaction-cards { display:flex; flex-direction:column; gap:1rem; margin:1.5rem 0; }
+        .interaction-card {
+            background: var(--bg-subtle);
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            border-left: 5px solid var(--danger);
             overflow: hidden;
             transition: var(--transition);
         }
-        .faq-item:hover {
-            box-shadow: var(--shadow-hover);
+        .interaction-card:hover { box-shadow:var(--shadow-md); transform:translateY(-2px); }
+        .interaction-card-header {
+            display: flex; align-items:center; gap:.75rem;
+            padding: .875rem 1.25rem;
+            background: rgba(220,38,38,.05);
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
         }
+        .interaction-pill {
+            font-size: var(--text-sm);
+            font-weight: 700;
+            color: var(--danger);
+            background: rgba(220,38,38,.1);
+            border-radius: 20px;
+            padding: .2rem .75rem;
+            white-space: nowrap;
+        }
+        .interaction-plus { font-weight:700; color:var(--text-muted); font-size:var(--text-lg); }
+        .interaction-pill.second { color:var(--warning); background:rgba(217,119,6,.1); }
+        .interaction-card-body {
+            padding: .875rem 1.25rem;
+            font-size: var(--text-sm);
+            line-height: var(--leading-loose);
+            color: var(--text-secondary);
+        }
+        .interaction-card-body em { color:var(--text-muted); }
+
+        /* Tabela (mantida para impressão e telas largas, mas escondida em mobile via CSS de cards) */
+        .table-container { overflow-x:auto; margin:1.5rem 0; border-radius:12px; box-shadow:var(--shadow-sm); }
+        table { width:100%; border-collapse:collapse; background:var(--bg-card); }
+        table caption { text-align:left; padding:1rem; font-weight:600; color:var(--primary); font-size:var(--text-sm); }
+        th { background:var(--primary); color:white; padding:1rem 1.125rem; text-align:left; font-size:var(--text-sm); }
+        td { padding:.875rem 1.125rem; border-bottom:1px solid var(--border); font-size:var(--text-sm); line-height:var(--leading-loose); }
+        tr:hover { background:var(--primary-light); }
+
+        /* Responsividade tabela */
+        @media (max-width: 600px) {
+            .table-container { display:none; } /* Substituída pelos cards em mobile */
+        }
+        @media (min-width: 601px) {
+            .interaction-cards { display:none; } /* Cards escondidos em desktop */
+        }
+
+        /* ── Source cards ── */
+        .sources-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px,1fr)); gap:1.5rem; margin-top:1.5rem; }
+        .source-card {
+            background: var(--bg-subtle);
+            padding: 1.75rem;
+            border-radius: 16px;
+            border-top: 4px solid var(--primary);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex; flex-direction:column; gap:.875rem;
+        }
+        .source-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); }
+        .source-card h3 { color:var(--primary); font-family:var(--font-display); font-size:var(--text-lg); margin:0; }
+        .source-card p  { font-size:var(--text-sm); margin:0; }
+        .usage-tip {
+            font-size: var(--text-xs);
+            background: var(--tip-bg);
+            color: var(--tip-text);
+            padding: .875rem 1rem;
+            border-radius: 10px;
+            line-height: 1.7;
+            border-left: 3px solid var(--primary);
+            flex: 1;
+        }
+        .usage-tip strong { display:block; margin-bottom:.4rem; text-transform:uppercase; font-size:.7rem; letter-spacing:.6px; }
+        .source-card a {
+            display: block; text-align:center;
+            color: var(--primary); font-weight:600; font-size:var(--text-sm);
+            padding: .7rem; border:2px solid var(--primary); border-radius:8px;
+            text-decoration:none; transition:var(--transition);
+        }
+        .source-card a:hover { background:var(--primary); color:white; }
+        .source-card a:focus-visible { outline:2px solid var(--primary); outline-offset:2px; }
+
+        /* ════════════════════════════════════════
+           8. FAQ — ACCORDION ACESSÍVEL
+        ════════════════════════════════════════ */
+        .faq-list { display:flex; flex-direction:column; gap:.875rem; margin-top:1.25rem; }
+
+        .faq-item {
+            background: var(--bg-subtle);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            border-left: 5px solid var(--primary);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            transition: box-shadow .25s;
+        }
+        .faq-item:hover { box-shadow:var(--shadow-md); }
+        .faq-item[open]  { box-shadow:var(--shadow-md); }
+
+        /* summary: botão nativo acessível por teclado */
         .faq-item summary {
             cursor: pointer;
-            padding: 1.25rem 1.5rem;
+            padding: 1.125rem 1.375rem;
             font-weight: 600;
-            font-size: 1.05em;
+            font-size: var(--text-base);
             color: var(--primary);
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
+            list-style: none;          /* Remove ▶ nativo */
+            display: flex; justify-content:space-between; align-items:center; gap:1rem;
             user-select: none;
-            transition: var(--transition);
+            transition: background .2s;
+            border-radius: 8px;
         }
-        .faq-item summary::-webkit-details-marker { display: none; }
-        .faq-item summary:hover { background: var(--primary-light); }
-        .faq-item summary:focus-visible { outline: 2px solid var(--primary); outline-offset: -2px; }
+        /* Remove marcador em Firefox */
+        .faq-item summary::-webkit-details-marker { display:none; }
+        .faq-item summary::marker { content:""; }
+
+        .faq-item summary:hover      { background:var(--primary-light); }
+        /* Foco visível com anel de alto contraste */
+        .faq-item summary:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: -3px;
+            border-radius: 8px;
+        }
+
         .faq-chevron {
-            font-size: 0.85em;
-            transition: transform 0.3s ease;
+            font-size: .8em;
+            transition: transform .3s ease;
             flex-shrink: 0;
             color: var(--primary);
+            display: inline-block;
         }
-        .faq-item[open] .faq-chevron { transform: rotate(180deg); }
+        .faq-item[open] .faq-chevron { transform:rotate(180deg); }
+
         .faq-answer {
-            padding: 0 1.5rem 1.5rem 1.5rem;
-            background: var(--faq-answer-bg);
-            color: var(--faq-answer-text);
-            border-top: 1px solid var(--border-color);
-            line-height: 1.7;
+            padding: 0 1.375rem 1.375rem;
+            background: var(--faq-bg);
+            border-top: 1px solid var(--border);
+            line-height: var(--leading-loose);
         }
-        .faq-answer p { padding-top: 1rem; }
-        .faq-answer strong { color: var(--primary); }
+        .faq-answer p { padding-top: 1rem; color:var(--faq-text); margin:0; font-size:var(--text-sm); }
+        .faq-answer strong { color:inherit; }
 
-        /* ── Animação de entrada dos cards ── */
-        .card-animate {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
+        /* ════════════════════════════════════════
+           9. COMPARTILHAR — PAINEL EXPANDIDO
+        ════════════════════════════════════════ */
+        .share-panel {
+            display: flex; flex-wrap:wrap; gap:.875rem;
+            margin-top: 1.5rem;
         }
-        .card-animate.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .share-btn {
+            display: inline-flex; align-items:center; gap:.5rem;
+            padding: .75rem 1.375rem;
+            border-radius: 10px;
+            font-weight: 600; font-size:var(--text-sm);
+            border: none; cursor:pointer;
+            transition: var(--transition);
         }
+        .share-btn:focus-visible { outline:3px solid var(--primary); outline-offset:2px; }
 
-        /* ── Botões ── */
-        .btn {
-            display: inline-block; padding: 1rem 2.25rem;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white; border-radius: 12px; font-weight: 600; border: none; cursor: pointer;
-            box-shadow: var(--shadow); transition: var(--transition); font-size: 1em;
+        .share-whatsapp {
+            background: #25D366; color:white;
+            box-shadow: 0 4px 12px rgba(37,211,102,.3);
         }
-        .btn:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
-        .btn:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+        .share-whatsapp:hover { background:#1ebe5d; transform:translateY(-2px); }
 
+        .share-copy {
+            background: var(--bg-subtle); color:var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .share-copy:hover { background:var(--primary); color:white; transform:translateY(-2px); }
+
+        .share-native {
+            background: linear-gradient(135deg,var(--primary),var(--primary-dark));
+            color:white;
+            box-shadow: var(--shadow-md);
+        }
+        .share-native:hover { transform:translateY(-2px); box-shadow:var(--shadow-lg); }
+
+        /* Feedback de sucesso */
+        .share-feedback {
+            display: none;
+            align-items: center; gap:.5rem;
+            font-size: var(--text-sm); font-weight:600;
+            color: var(--success);
+            padding: .625rem 1rem;
+            background: rgba(21,128,61,.1);
+            border-radius: 8px;
+            border: 1px solid rgba(21,128,61,.3);
+        }
+        .share-feedback.visible { display:flex; }
+
+        /* ════════════════════════════════════════
+           10. BOTÕES FLUTUANTES
+        ════════════════════════════════════════ */
         .floating-share {
-            position: fixed; bottom: 30px; left: 30px; width: 60px; height: 60px;
-            background: var(--success); color: white; border: none; border-radius: 50%;
-            cursor: pointer; font-size: 1.5em; display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 8px 25px rgba(21, 128, 61, 0.4); z-index: 99; transition: var(--transition);
+            position: fixed; bottom:28px; left:28px;
+            width:56px; height:56px;
+            background: #25D366; color:white;
+            border:none; border-radius:50%;
+            cursor:pointer; font-size:1.4em;
+            display: flex; align-items:center; justify-content:center;
+            box-shadow: 0 6px 20px rgba(37,211,102,.45);
+            z-index:99; transition:var(--transition);
         }
-        .floating-share:hover { transform: scale(1.1) translateY(-5px); }
-        .floating-share:focus-visible { outline: 2px solid white; outline-offset: 4px; }
+        .floating-share:hover        { transform:scale(1.1) translateY(-4px); }
+        .floating-share:focus-visible { outline:3px solid white; outline-offset:4px; }
 
         .back-to-top {
-            position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px;
-            background: var(--primary); color: white; border: none; border-radius: 50%;
-            cursor: pointer; font-size: 1.5em; display: none; align-items: center; justify-content: center;
-            box-shadow: var(--shadow); z-index: 99; transition: var(--transition);
+            position: fixed; bottom:28px; right:28px;
+            width:56px; height:56px;
+            background: var(--primary); color:white;
+            border:none; border-radius:50%;
+            cursor:pointer; font-size:1.3em;
+            display: none; align-items:center; justify-content:center;
+            box-shadow: var(--shadow-md);
+            z-index:99; transition:var(--transition);
         }
-        .back-to-top:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
-        .back-to-top:focus-visible { outline: 2px solid white; outline-offset: 4px; }
+        .back-to-top:hover        { transform:translateY(-4px); box-shadow:var(--shadow-lg); }
+        .back-to-top:focus-visible { outline:3px solid white; outline-offset:4px; }
 
-        /* ── Footer ── */
-        footer { background: var(--neutral-dark); color: white; padding: 3.75rem 1.25rem; text-align: center; margin-top: 5rem; }
-        footer .authorship { margin-top: 1.5625rem; padding-top: 1.5625rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.9em; line-height: 1.8; }
-        .footer-links { margin-top: 1.25rem; display: flex; justify-content: center; gap: 1.5625rem; flex-wrap: wrap; }
+        /* ════════════════════════════════════════
+           11. ANIMAÇÕES DE ENTRADA
+        ════════════════════════════════════════ */
+        .card-animate {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity .5s ease, transform .5s ease;
+        }
+        .card-animate.visible { opacity:1; transform:translateY(0); }
+
+        /* ════════════════════════════════════════
+           12. FOOTER
+        ════════════════════════════════════════ */
+        footer {
+            background: #111827;
+            color: #E5E7EB;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            margin-top: 5rem;
+            font-size: var(--text-sm);
+            line-height: var(--leading-loose);
+        }
+        footer p { color:#9CA3AF; margin-bottom:.5rem; }
+        .footer-authorship {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,.08);
+            color: #D1D5DB;
+        }
+        .footer-authorship small { display:block; margin-top:.5rem; color:#6B7280; font-size:var(--text-xs); }
+        .footer-links { margin-top:1.25rem; display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap; }
         .footer-links button {
-            background: none; border: none; color: rgba(255,255,255,0.7); font-size: 0.85em;
-            text-decoration: underline; cursor: pointer; transition: var(--transition);
-            padding: 0.25rem 0.5rem; border-radius: 4px;
+            background:none; border:none; color:#9CA3AF;
+            font-size:var(--text-xs); text-decoration:underline;
+            cursor:pointer; transition:var(--transition); padding:.25rem .5rem; border-radius:4px;
         }
-        .footer-links button:hover { color: white; }
-        .footer-links button:focus-visible { outline: 2px solid white; outline-offset: 2px; border-radius: 4px; }
+        .footer-links button:hover { color:white; }
+        .footer-links button:focus-visible { outline:2px solid white; outline-offset:2px; }
 
-        /* ── Modal ── */
+        /* Changelog no footer */
+        .changelog {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,.06);
+            text-align: left;
+            max-width: 480px;
+            margin-inline: auto;
+        }
+        .changelog h3 {
+            font-size: var(--text-xs);
+            font-weight:700; text-transform:uppercase; letter-spacing:.8px;
+            color:#6B7280; margin:0 0 .75rem;
+        }
+        .changelog ul { list-style:none; display:flex; flex-direction:column; gap:.4rem; }
+        .changelog li { font-size:var(--text-xs); color:#6B7280; display:flex; gap:.5rem; align-items:baseline; }
+        .changelog time { color:#4B5563; font-variant-numeric:tabular-nums; flex-shrink:0; }
+
+        /* ════════════════════════════════════════
+           13. MODAIS
+        ════════════════════════════════════════ */
         .modal {
-            display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.7); backdrop-filter: blur(5px);
+            display: none; position:fixed; z-index:1000;
+            inset:0; background:rgba(0,0,0,.65);
+            backdrop-filter: blur(5px);
+            overscroll-behavior: contain;
         }
         .modal-content {
-            background: var(--bg-primary); margin: 5% auto; padding: 2.5rem; border-radius: 20px;
-            width: 90%; max-width: 750px; max-height: 85vh; overflow-y: auto; position: relative;
+            background: var(--bg-card);
+            margin: 5% auto;
+            padding: 2.5rem;
+            border-radius: 20px;
+            width: 90%; max-width: 720px;
+            max-height: 85vh; overflow-y:auto;
+            position: relative;
+            box-shadow: 0 25px 60px rgba(0,0,0,.35);
         }
-        .modal-content h2 { border-bottom: none; }
-        .modal-disclaimer { margin-top: 1rem; }
+        .modal-content h2 { border-bottom:none; margin-bottom:1rem; }
+        .modal-content p  { font-size:var(--text-sm); margin-bottom:.875rem; }
+        .modal-content p:last-child { margin-bottom:0; }
+        .modal-content h3 { font-size:var(--text-base); margin:1.25rem 0 .5rem; color:var(--primary); }
         .close-modal {
-            position: absolute; top: 1.25rem; right: 1.5625rem; font-size: 30px; cursor: pointer;
-            color: var(--text-secondary); background: none; border: none; transition: var(--transition);
-            padding: 0.5rem; border-radius: 6px; display: flex; align-items: center; justify-content: center;
-            line-height: 1;
+            position: absolute; top:1.25rem; right:1.25rem;
+            font-size:1.75rem; cursor:pointer;
+            color:var(--text-muted); background:none; border:none;
+            padding:.375rem .625rem; border-radius:6px;
+            transition:var(--transition); line-height:1;
         }
-        .close-modal:hover { color: var(--primary); background: rgba(0, 82, 163, 0.1); }
-        .close-modal:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; background: rgba(0, 82, 163, 0.1); }
+        .close-modal:hover { color:var(--primary); background:var(--primary-light); }
+        .close-modal:focus-visible { outline:2px solid var(--primary); outline-offset:2px; }
 
-        /* ── Utilitários ── */
-        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
+        /* ════════════════════════════════════════
+           14. UTILITÁRIOS
+        ════════════════════════════════════════ */
+        .sr-only {
+            position:absolute; width:1px; height:1px; padding:0;
+            margin:-1px; overflow:hidden; clip:rect(0,0,0,0);
+            white-space:nowrap; border-width:0;
+        }
 
-        /* ── Responsivo ── */
+        /* ════════════════════════════════════════
+           15. RESPONSIVO
+        ════════════════════════════════════════ */
         @media (max-width: 768px) {
-            .hamburger { display: flex; }
-            .main-container { flex-direction: column; padding: 1rem; gap: 1rem; }
+            .hamburger { display:flex; }
+            .main-container { flex-direction:column; padding:1rem; gap:1rem; }
             .sidebar {
-                display: none; position: fixed; top: 60px; left: 0; width: 100%;
-                height: calc(100vh - 60px); border-radius: 0; z-index: 99; overflow-y: auto;
-                background: var(--bg-primary); box-shadow: 2px 0 10px rgba(0,0,0,0.2);
-                padding: 1.5rem; border: none;
+                display: none;
+                position: fixed; top:58px; left:0;
+                width:100%; height:calc(100vh - 58px);
+                border-radius:0; z-index:99;
+                overflow-y:auto;
+                background:var(--bg-card);
+                box-shadow:0 8px 32px rgba(0,0,0,.25);
+                padding:1.5rem; border:none;
+                /* Scroll suave dentro do menu mobile */
+                overscroll-behavior: contain;
             }
-            .sidebar.active { display: block; }
-            .content { padding: 1.25rem; }
-            header h1 { font-size: 1.1em; }
-            h2 { font-size: 1.5em; }
-            .sources-grid { grid-template-columns: 1fr; }
-            .floating-share { bottom: 20px; left: 20px; width: 50px; height: 50px; font-size: 1.25em; }
-            .back-to-top { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 1.25em; }
-            .stat-card { flex-direction: column; text-align: center; padding: 1.25rem; }
-            .stat-number { font-size: 2.2em; }
+            .sidebar.active { display:block; }
+            .content { padding:1.25rem 1rem; }
+            h2 { font-size:var(--text-2xl); }
+            .sources-grid { grid-template-columns:1fr; }
+            .floating-share, .back-to-top { bottom:20px; width:50px; height:50px; font-size:1.2em; }
+            .floating-share { left:20px; }
+            .back-to-top    { right:20px; }
+            .stat-card { flex-direction:column; text-align:center; padding:1.25rem; }
+            .share-panel { flex-direction:column; }
+            .share-btn { justify-content:center; }
         }
 
-        /* ── Tabela responsiva em mobile: layout de cards ── */
-        @media (max-width: 600px) {
-            .table-container { border-radius: 8px; }
-            table, thead, tbody, th, td, tr { display: block; }
-            thead tr { display: none; }
-            tbody tr {
-                margin-bottom: 1rem;
-                border: 1px solid var(--border-color);
-                border-radius: 10px;
-                padding: 0.75rem;
-                background: var(--bg-primary);
-            }
-            tbody tr:hover { background: var(--primary-light); }
-            td {
-                padding: 0.5rem 0.75rem;
-                border: none;
-                border-bottom: 1px solid var(--border-color);
-                font-size: 0.9em;
-            }
-            td:last-child { border-bottom: none; }
-            td::before {
-                content: attr(data-label);
-                font-weight: 700;
-                display: block;
-                color: var(--primary);
-                font-size: 0.75em;
-                text-transform: uppercase;
-                letter-spacing: 0.5px;
-                margin-bottom: 0.25rem;
-            }
+        @media (max-width: 480px) {
+            .content { padding:1rem .875rem; }
+            .stat-number { font-size:2rem; }
         }
 
-        /* ── Impressão ── */
+        /* ════════════════════════════════════════
+           16. IMPRESSÃO
+        ════════════════════════════════════════ */
         @media print {
-            #reading-progress,
-            header,
-            .hamburger,
-            .floating-share,
-            .back-to-top,
-            .footer-links,
-            .sidebar { display: none !important; }
-            .main-container { flex-direction: column; padding: 0; }
-            body { background: white; }
-            .content { box-shadow: none; border: none; padding: 0; }
-            a[href]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #555; }
-            .faq-item { border: 1px solid #ccc; }
-            .faq-item summary { color: #003D7A; }
+            #reading-progress, header, .hamburger,
+            .floating-share, .back-to-top, .footer-links,
+            .sidebar, .share-panel { display:none !important; }
+            .main-container { flex-direction:column; padding:0; }
+            body { background:white; font-size:11pt; }
+            .content { box-shadow:none; border:none; padding:0; }
+            a[href]::after { content:" (" attr(href) ")"; font-size:9pt; color:#555; }
+            .interaction-cards { display:flex !important; }
+            .table-container   { display:none !important; }
+            .faq-item { border:1px solid #ccc; }
         }
     </style>
 </head>
 <body id="top">
 
     <!-- Barra de progresso de leitura -->
-    <progress id="reading-progress" aria-label="Progresso de leitura" value="0" max="100"></progress>
+    <progress id="reading-progress" aria-label="Progresso de leitura da página" value="0" max="100"></progress>
 
     <header>
         <h1><span aria-hidden="true">💊</span> Medicamentos Seguros</h1>
         <div class="header-controls">
-            <button id="theme-toggle" type="button" class="icon-btn" aria-label="Alternar entre modo claro e escuro" aria-pressed="false">
+            <button id="theme-toggle" type="button" class="icon-btn"
+                    aria-label="Ativar modo escuro" aria-pressed="false">
                 <span aria-hidden="true">🌙</span>
             </button>
-            <button id="menu-toggle" type="button" class="hamburger" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="sidebar">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button id="menu-toggle" type="button" class="hamburger"
+                    aria-label="Abrir menu de navegação"
+                    aria-expanded="false" aria-controls="sidebar">
+                <span></span><span></span><span></span>
             </button>
         </div>
     </header>
 
     <div class="main-container">
-        <nav class="sidebar" id="sidebar" aria-label="Navegação principal">
-            <span class="sidebar-label" aria-hidden="true">Navegação</span>
-            <ul>
-                <li><a href="#intro" class="nav-link">Por que cuidar?</a></li>
-                <li><a href="#riscos" class="nav-link">Entendendo os Riscos</a></li>
-                <li><a href="#como-medicar" class="nav-link">Dicas de Segurança</a></li>
-                <li><a href="#interacoes" class="nav-link">Misturas Perigosas</a></li>
-                <li><a href="#fontes" class="nav-link">Guia de Pesquisa</a></li>
-                <li><a href="#faq" class="nav-link">Dúvidas Comuns</a></li>
-                <li><a href="#proximos-passos" class="nav-link">Como ajudar?</a></li>
+
+        <!-- ── Sidebar ── -->
+        <nav class="sidebar" id="sidebar" aria-label="Seções da página">
+            <span class="sidebar-label">Navegação</span>
+            <ul role="list">
+                <li><a href="#intro"         class="nav-link">Por que cuidar?</a></li>
+                <li><a href="#riscos"         class="nav-link">Entendendo os Riscos</a></li>
+                <li><a href="#como-medicar"   class="nav-link">Dicas de Segurança</a></li>
+                <li><a href="#interacoes"     class="nav-link">Misturas Perigosas</a></li>
+                <li><a href="#fontes"         class="nav-link">Guia de Pesquisa</a></li>
+                <li><a href="#faq"            class="nav-link">Dúvidas Comuns</a></li>
+                <li><a href="#proximos-passos" class="nav-link">Compartilhar</a></li>
             </ul>
         </nav>
 
-        <main class="content" id="main-content">
+        <main class="content" id="main-content" tabindex="-1">
 
-            <div class="disclaimer" role="alert">
+            <!-- Aviso de saúde -->
+            <div class="disclaimer" role="note">
                 <span aria-hidden="true">❤️</span>
-                <p><strong>Cuidado com sua saúde:</strong> Este guia é educativo e focado no seu bem-estar. Se você estiver sentindo algo, procure um médico ou converse com o farmacêutico. Em emergências, ligue <strong>192 (SAMU)</strong>.</p>
+                <p><strong>Este guia é educativo.</strong> Se sentir algo, procure um médico ou farmacêutico. Emergências: <strong>192 (SAMU)</strong>.</p>
             </div>
 
-            <!-- ── Seção 1: Introdução ── -->
+            <!-- ══ Seção 1: Introdução ══ -->
             <section id="intro" aria-labelledby="intro-heading">
                 <h2 id="intro-heading">Cuidar da Saúde é um Ato de Amor</h2>
-                <div class="hero-intro">
-                    <p>Muitas vezes, na correria do dia a dia, tomamos um "remedinho" para uma dor de cabeça sem pensar nas consequências. No entanto, o que parece ser uma solução rápida pode esconder perigos invisíveis. No Brasil, o uso inadequado de medicamentos é uma das maiores causas de internações e complicações graves de saúde.</p>
+                <p>Na correria do dia a dia, é comum tomar um "remedinho" sem pensar nas consequências. O que parece solução rápida pode esconder perigos invisíveis. No Brasil, o uso inadequado de medicamentos é uma das maiores causas de internações e complicações graves de saúde.</p>
 
-                    <div class="stat-card card-animate" role="img" aria-label="Dado alarmante: aproximadamente 20 mil pessoas morrem por ano no Brasil pelo uso incorreto de remédios">
-                        <div class="stat-number" id="death-counter" aria-hidden="true">0</div>
-                        <div class="stat-label">
-                            <strong>mortes por ano no Brasil</strong>
-                            em decorrência do uso incorreto de remédios — mais do que muitos acidentes graves.
-                            Ao se informar, você protege a si mesmo e a quem você ama.
-                        </div>
+                <div class="stat-card card-animate"
+                     role="img"
+                     aria-label="Dado alarmante: aproximadamente 20 mil pessoas morrem por ano no Brasil pelo uso incorreto de remédios">
+                    <div class="stat-number" id="death-counter" aria-hidden="true">0</div>
+                    <div class="stat-label">
+                        <strong>mortes por ano no Brasil</strong>
+                        em decorrência do uso incorreto de remédios — mais do que muitos acidentes graves.
+                        Ao se informar, você protege a si mesmo e a quem você ama.
                     </div>
                 </div>
             </section>
 
-            <!-- ── Seção 2: Riscos ── -->
+            <!-- ══ Seção 2: Riscos ══ -->
             <section id="riscos" aria-labelledby="riscos-heading">
-                <h2 id="riscos-heading"><span aria-hidden="true">🚨</span> Entendendo os Riscos (O que acontece no corpo?)</h2>
-                <p>O medicamento é uma ferramenta poderosa, mas deve ser usado com respeito. Entenda como a automedicação pode afetar seu organismo de forma profunda:</p>
+                <h2 id="riscos-heading"><span aria-hidden="true">🚨</span> Entendendo os Riscos</h2>
+                <p>O medicamento é uma ferramenta poderosa, mas deve ser usado com respeito. Veja como a automedicação pode afetar seu organismo:</p>
 
                 <div class="didactic-card card-animate">
                     <strong>Reações Alérgicas Inesperadas</strong>
-                    <p>O seu corpo pode "estranhar" uma substância de repente, desencadeando uma resposta imunológica agressiva, mesmo que você já tenha tomado o remédio antes.</p>
+                    <p>Seu corpo pode "estranhar" uma substância de repente, desencadeando uma resposta imunológica agressiva — mesmo que você já tenha tomado o remédio antes.</p>
                     <div class="explanation"><span aria-hidden="true">💡</span><p>Imagine o remédio como um "invasor" que seu corpo decide atacar por engano, causando desde manchas na pele até inchaços perigosos na garganta.</p></div>
                 </div>
 
                 <div class="didactic-card card-animate">
                     <strong>Interações: A "Briga" entre Medicamentos</strong>
-                    <p>Quando você mistura remédios por conta própria, um pode anular o efeito do outro ou, pior, potencializar a toxicidade no seu fígado e rins.</p>
-                    <div class="explanation"><span aria-hidden="true">💡</span><p>É como misturar dois produtos químicos fortes: o resultado pode ser uma reação imprevista e prejudicial dentro do seu organismo.</p></div>
+                    <p>Misturar remédios por conta própria pode fazer um anular o outro ou potencializar a toxicidade no seu fígado e rins.</p>
+                    <div class="explanation"><span aria-hidden="true">💡</span><p>É como misturar dois produtos químicos fortes: o resultado pode ser uma reação imprevisível e prejudicial dentro do seu organismo.</p></div>
                 </div>
 
                 <div class="didactic-card card-animate">
                     <strong>Resistência Bacteriana (Superbactérias)</strong>
-                    <p>O uso inadequado de antibióticos "ensina" as bactérias a sobreviverem, tornando as doenças muito mais difíceis de tratar no futuro.</p>
-                    <div class="explanation"><span aria-hidden="true">💡</span><p>É como se você desse um "manual de defesa" para a bactéria. Na próxima vez que precisar do remédio, ele pode não funcionar mais.</p></div>
+                    <p>O uso inadequado de antibióticos "ensina" as bactérias a sobreviverem, tornando infecções futuras muito mais difíceis de tratar.</p>
+                    <div class="explanation"><span aria-hidden="true">💡</span><p>É como dar um "manual de defesa" para a bactéria. Na próxima vez que precisar do remédio, ele pode não funcionar mais.</p></div>
                 </div>
             </section>
 
-            <!-- ── Seção 3: Dicas ── -->
+            <!-- ══ Seção 3: Dicas ══ -->
             <section id="como-medicar" aria-labelledby="como-medicar-heading">
                 <h2 id="como-medicar-heading"><span aria-hidden="true">✅</span> Dicas para uma Medicação Segura</h2>
-                <p>Pequenos hábitos garantem que o tratamento funcione como deveria. Siga estas orientações fundamentais:</p>
+                <p>Pequenos hábitos garantem que o tratamento funcione como deveria:</p>
 
                 <ul class="tip-list">
                     <li class="tip-item card-animate">
                         <div class="tip-icon" aria-hidden="true">💧</div>
-                        <div class="tip-text"><strong>Água é a melhor amiga:</strong> Tome remédios sempre com um copo cheio de água. Leite, sucos, refrigerantes ou café podem reagir com a fórmula e impedir a absorção correta pelo sangue.</div>
+                        <div class="tip-text"><strong>Água é a melhor amiga</strong>Tome remédios sempre com um copo cheio de água. Leite, sucos, refrigerantes ou café podem reagir com a fórmula e impedir a absorção correta pelo sangue.</div>
                     </li>
                     <li class="tip-item card-animate">
                         <div class="tip-icon" aria-hidden="true">💊</div>
-                        <div class="tip-text"><strong>Não parta o comprimido:</strong> A menos que ele tenha o sulco (aquela marca de corte no meio). Sem o sulco, a substância não é distribuída igualmente, e você pode tomar uma dose errada.</div>
+                        <div class="tip-text"><strong>Não parta o comprimido</strong>A menos que ele tenha o sulco (a marca de corte no meio). Sem o sulco, a substância não é distribuída igualmente e você pode tomar uma dose errada.</div>
                     </li>
                     <li class="tip-item card-animate">
                         <div class="tip-icon" aria-hidden="true">🚫</div>
-                        <div class="tip-text"><strong>Cuidado com o álcool:</strong> O álcool "distrai" e sobrecarrega o fígado. Se o fígado estiver ocupado processando a bebida, ele não conseguirá limpar o remédio do seu corpo, aumentando o risco de intoxicação.</div>
+                        <div class="tip-text"><strong>Cuidado com o álcool</strong>O álcool sobrecarrega o fígado. Se ele estiver ocupado processando a bebida, não conseguirá eliminar o remédio do seu corpo, aumentando o risco de intoxicação.</div>
                     </li>
                     <li class="tip-item card-animate">
                         <div class="tip-icon" aria-hidden="true">⏰</div>
-                        <div class="tip-text"><strong>Respeite o relógio:</strong> Tomar no horário exato mantém a concentração do remédio constante. Atrasar ou adiantar pode fazer com que o tratamento perca a eficácia.</div>
+                        <div class="tip-text"><strong>Respeite o relógio</strong>Tomar no horário certo mantém a concentração do remédio constante no sangue. Atrasar ou adiantar pode reduzir a eficácia do tratamento.</div>
                     </li>
                     <li class="tip-item card-animate">
                         <div class="tip-icon" aria-hidden="true">🗑️</div>
-                        <div class="tip-text"><strong>Descarte correto:</strong> Medicamentos vencidos ou não utilizados nunca devem ser jogados no lixo comum ou no vaso sanitário. Procure um ponto de coleta em farmácias, postos de saúde ou drogarias. O descarte inadequado prejudica o meio ambiente e a saúde pública.</div>
+                        <div class="tip-text"><strong>Descarte correto</strong>Medicamentos vencidos nunca devem ir ao lixo comum ou ao vaso sanitário. Leve a pontos de coleta em farmácias ou postos de saúde — o descarte incorreto contamina água e solo.</div>
                     </li>
                 </ul>
             </section>
 
-            <!-- ── Seção 4: Interações ── -->
+            <!-- ══ Seção 4: Interações ══ -->
             <section id="interacoes" aria-labelledby="interacoes-heading">
                 <h2 id="interacoes-heading"><span aria-hidden="true">⚠️</span> Misturas que você deve evitar</h2>
-                <p>Algumas combinações são extremamente perigosas. Confira os exemplos mais comuns que exigem atenção redobrada:</p>
+                <p>Algumas combinações são extremamente perigosas. Exemplos mais comuns que exigem atenção redobrada:</p>
+
+                <!-- Cards em mobile -->
+                <div class="interaction-cards" aria-label="Combinações perigosas de medicamentos">
+                    <div class="interaction-card card-animate">
+                        <div class="interaction-card-header">
+                            <span class="interaction-pill">Paracetamol (Tylenol)</span>
+                            <span class="interaction-plus">+</span>
+                            <span class="interaction-pill second">Álcool</span>
+                        </div>
+                        <div class="interaction-card-body">Risco severo de destruição das células do fígado (hepatotoxicidade). Pode levar à falência hepática mesmo com doses normais.</div>
+                    </div>
+                    <div class="interaction-card card-animate">
+                        <div class="interaction-card-header">
+                            <span class="interaction-pill">Rifampicina</span>
+                            <span class="interaction-plus">+</span>
+                            <span class="interaction-pill second">Anticoncepcional hormonal</span>
+                        </div>
+                        <div class="interaction-card-body">A rifampicina acelera a destruição dos hormônios do anticoncepcional no fígado, podendo causar falha contraceptiva. <em>Antibióticos comuns (amoxicilina, etc.) não têm essa interação comprovada. Consulte sempre seu médico.</em></div>
+                    </div>
+                    <div class="interaction-card card-animate">
+                        <div class="interaction-card-header">
+                            <span class="interaction-pill">Remédio de Pressão</span>
+                            <span class="interaction-plus">+</span>
+                            <span class="interaction-pill second">Anti-inflamatórios (AINE)</span>
+                        </div>
+                        <div class="interaction-card-body">A pressão pode subir perigosamente e os rins ficam sobrecarregados, aumentando o risco de insuficiência renal.</div>
+                    </div>
+                    <div class="interaction-card card-animate">
+                        <div class="interaction-card-header">
+                            <span class="interaction-pill">Aspirina / Ibuprofeno</span>
+                            <span class="interaction-plus">+</span>
+                            <span class="interaction-pill second">Outros Anti-inflamatórios</span>
+                        </div>
+                        <div class="interaction-card-body">Risco aumentado de feridas no estômago (úlceras) e sangramentos internos. Nunca combine dois medicamentos da mesma classe sem orientação médica.</div>
+                    </div>
+                </div>
+
+                <!-- Tabela em desktop -->
                 <div class="table-container">
                     <table>
                         <caption>Combinações perigosas de medicamentos e seus efeitos</caption>
                         <thead>
                             <tr>
-                                <th scope="col">Se misturar isso...</th>
-                                <th scope="col">...Com isso</th>
+                                <th scope="col">Se misturar isso…</th>
+                                <th scope="col">…com isso</th>
                                 <th scope="col">O que ocorre?</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td data-label="Se misturar isso..."><strong>Paracetamol</strong> (Tylenol)</td>
-                                <td data-label="...Com isso">Álcool</td>
+                                <td data-label="Se misturar isso…"><strong>Paracetamol</strong> (Tylenol)</td>
+                                <td data-label="…com isso">Álcool</td>
                                 <td data-label="O que ocorre?">Risco severo de destruição das células do fígado (hepatotoxicidade).</td>
                             </tr>
                             <tr>
-                                <td data-label="Se misturar isso..."><strong>Rifampicina</strong> (antibiótico para tuberculose)</td>
-                                <td data-label="...Com isso">Anticoncepcional hormonal</td>
-                                <td data-label="O que ocorre?">A rifampicina acelera a destruição dos hormônios do anticoncepcional no fígado, podendo causar falha contraceptiva. Atenção: antibióticos comuns (amoxicilina, etc.) <em>não</em> têm essa interação comprovada. Consulte sempre seu médico.</td>
+                                <td data-label="Se misturar isso…"><strong>Rifampicina</strong> (antibiótico para tuberculose)</td>
+                                <td data-label="…com isso">Anticoncepcional hormonal</td>
+                                <td data-label="O que ocorre?">A rifampicina acelera a destruição dos hormônios do anticoncepcional no fígado, podendo causar falha contraceptiva. <em>Antibióticos comuns não têm essa interação comprovada.</em></td>
                             </tr>
                             <tr>
-                                <td data-label="Se misturar isso..."><strong>Remédio de Pressão</strong></td>
-                                <td data-label="...Com isso">Anti-inflamatórios</td>
+                                <td data-label="Se misturar isso…"><strong>Remédio de Pressão</strong></td>
+                                <td data-label="…com isso">Anti-inflamatórios (AINE)</td>
                                 <td data-label="O que ocorre?">A pressão pode subir perigosamente e os rins ficam sobrecarregados.</td>
                             </tr>
                             <tr>
-                                <td data-label="Se misturar isso..."><strong>Aspirina / Ibuprofeno</strong></td>
-                                <td data-label="...Com isso">Outros Anti-inflamatórios</td>
-                                <td data-label="O que ocorre?">Risco aumentado de feridas no estômago (úlceras) e sangramentos internos.</td>
+                                <td data-label="Se misturar isso…"><strong>Aspirina / Ibuprofeno</strong></td>
+                                <td data-label="…com isso">Outros Anti-inflamatórios</td>
+                                <td data-label="O que ocorre?">Risco aumentado de úlceras e sangramentos internos.</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
-            <!-- ── Seção 5: Fontes ── -->
+            <!-- ══ Seção 5: Fontes ══ -->
             <section id="fontes" aria-labelledby="fontes-heading">
-                <h2 id="fontes-heading"><span aria-hidden="true">🔍</span> Guia de Pesquisa (Onde pesquisar com segurança?)</h2>
-                <p>A internet está cheia de informações falsas. Use sempre as ferramentas oficiais para proteger sua saúde. Aqui você encontra 7 fontes confiáveis e verificadas:</p>
+                <h2 id="fontes-heading"><span aria-hidden="true">🔍</span> Guia de Pesquisa</h2>
+                <p>A internet está cheia de informações falsas. Use sempre as ferramentas oficiais para proteger sua saúde. Aqui estão 7 fontes confiáveis e verificadas:</p>
                 <div class="sources-grid">
+
                     <div class="source-card card-animate">
                         <h3><span aria-hidden="true">🏥</span> Consultas ANVISA</h3>
-                        <p>Verifique se o medicamento é autorizado, seguro e está com registro ativo no Brasil. Base oficial, atualizada diariamente.</p>
+                        <p>Verifique se o medicamento é autorizado e está com registro ativo no Brasil. Base oficial, atualizada diariamente.</p>
                         <div class="usage-tip">
                             <strong>Como usar passo a passo:</strong>
-                            1. Clique no link abaixo para abrir o portal oficial.<br>
-                            2. No campo <strong>"Nome do Produto"</strong>, digite o nome comercial (ex: "Tylenol") <em>ou</em> o princípio ativo (ex: "Paracetamol").<br>
+                            1. Abra o portal pelo link abaixo.<br>
+                            2. Em <strong>"Nome do Produto"</strong>, digite o nome comercial (ex: "Tylenol") <em>ou</em> o princípio ativo (ex: "Paracetamol").<br>
                             3. Clique no botão azul <strong>"Consultar"</strong>.<br>
-                            4. Na tabela de resultados, localize seu produto e verifique a coluna <strong>"Situação do Registro"</strong> — deve constar <strong>"Válido"</strong>.<br>
-                            5. Clique na linha do produto para ver todos os detalhes: fabricante, categoria e prazo de validade do registro.
+                            4. Na tabela, verifique a coluna <strong>"Situação do Registro"</strong> — deve constar <strong>"Válido"</strong>.<br>
+                            5. Clique na linha do produto para ver fabricante, categoria e prazo do registro.
                         </div>
                         <a href="https://consultas.anvisa.gov.br/#/medicamentos/" target="_blank" rel="noopener noreferrer">Acessar ANVISA</a>
                     </div>
+
                     <div class="source-card card-animate">
                         <h3><span aria-hidden="true">📱</span> Aplicativo MedSUS</h3>
-                        <p>Ferramenta oficial do Ministério da Saúde com informações sobre todos os medicamentos do SUS (RENAME), incluindo indicações, doses e locais de retirada gratuita.</p>
+                        <p>App oficial do Ministério da Saúde com informações sobre medicamentos do SUS (RENAME): indicações, doses e onde retirar gratuitamente.</p>
                         <div class="usage-tip">
                             <strong>Como usar passo a passo:</strong>
-                            1. Acesse a página oficial pelo link abaixo para ler sobre o aplicativo.<br>
-                            2. Para instalar: busque <strong>"MedSUS"</strong> diretamente na App Store (iPhone) ou Google Play (Android).<br>
-                            3. Abra o app e use a <strong>barra de busca</strong> para digitar o nome do medicamento ou princípio ativo.<br>
+                            1. Acesse a página oficial pelo link abaixo.<br>
+                            2. Instale: busque <strong>"MedSUS"</strong> na App Store (iPhone) ou Google Play (Android).<br>
+                            3. Use a <strong>barra de busca</strong> para digitar o nome do medicamento.<br>
                             4. Toque no resultado para ver indicações, efeitos adversos e onde retirar pelo SUS.<br>
-                            <em>⚠️ Nota: o conteúdo atual ainda tem linguagem técnica — ideal para tirar dúvidas junto ao farmacêutico da UBS.</em>
+                            <em>⚠️ O conteúdo é técnico — leve dúvidas ao farmacêutico da UBS.</em>
                         </div>
                         <a href="https://www.gov.br/saude/pt-br/assuntos/noticias/2024/janeiro/aplicativo-medsus-e-disponibilizado-para-populacao" target="_blank" rel="noopener noreferrer">Conhecer MedSUS</a>
                     </div>
+
                     <div class="source-card card-animate">
                         <h3><span aria-hidden="true">💊</span> Bulário Eletrônico ANVISA</h3>
-                        <p>Acesse a bula oficial aprovada pela ANVISA. Existe a versão técnica (para profissionais) e a versão simplificada para o paciente — sempre prefira a do paciente.</p>
+                        <p>Bulas oficiais aprovadas pela ANVISA — versão técnica (profissionais) e versão simplificada para o paciente. Prefira sempre a do paciente.</p>
                         <div class="usage-tip">
                             <strong>Como usar passo a passo:</strong>
-                            1. Clique no link abaixo para abrir o Bulário Eletrônico da ANVISA.<br>
-                            2. No campo <strong>"Medicamento"</strong>, digite o nome do produto ou o princípio ativo.<br>
-                            3. Clique em <strong>"Consultar"</strong> para ver a lista de resultados.<br>
-                            4. Na tabela, localize a coluna <strong>"Bula para o Paciente"</strong> e clique no ícone de PDF <strong>🔴</strong> na linha correspondente.<br>
-                            5. Leia especialmente as seções: <em>"Para que este medicamento é indicado"</em>, <em>"Quando não devo usar"</em> e <em>"Quais os males que este medicamento pode causar"</em>.
+                            1. Abra o Bulário pelo link abaixo.<br>
+                            2. Em <strong>"Medicamento"</strong>, digite o nome do produto ou princípio ativo.<br>
+                            3. Clique em <strong>"Consultar"</strong>.<br>
+                            4. Localize a coluna <strong>"Bula para o Paciente"</strong> e clique no ícone PDF 🔴.<br>
+                            5. Leia: <em>"Para que é indicado"</em>, <em>"Quando não devo usar"</em> e <em>"Quais os males que pode causar"</em>.
                         </div>
                         <a href="https://consultas.anvisa.gov.br/#/bulario/" target="_blank" rel="noopener noreferrer">Ver Bulas Oficiais</a>
                     </div>
+
                     <div class="source-card card-animate">
                         <h3><span aria-hidden="true">📚</span> CRF-SP (Educação Farmacêutica)</h3>
-                        <p>Orientações e guias sobre uso racional de medicamentos produzidos pelo Conselho Regional de Farmácia de São Paulo. Conteúdo técnico com linguagem acessível.</p>
+                        <p>Guias sobre uso racional de medicamentos produzidos pelo Conselho Regional de Farmácia de SP. Conteúdo técnico com linguagem acessível.</p>
                         <div class="usage-tip">
                             <strong>Como usar passo a passo:</strong>
                             1. Acesse o portal pelo link abaixo.<br>
                             2. No menu superior, clique em <strong>"Orientação Farmacêutica"</strong>.<br>
-                            3. Selecione <strong>"Fiscalização Orientativa"</strong> ou use o campo de busca no canto superior da página.<br>
-                            4. Pesquise por termos como <strong>"uso racional"</strong>, <strong>"automedicação"</strong> ou o nome de uma classe de medicamentos.<br>
-                            5. Os artigos são produzidos por farmacêuticos e têm embasamento em legislação vigente da ANVISA.
+                            3. Selecione <strong>"Fiscalização Orientativa"</strong> ou use a busca.<br>
+                            4. Pesquise <strong>"uso racional"</strong>, <strong>"automedicação"</strong> ou a classe de medicamento.<br>
+                            5. Artigos elaborados por farmacêuticos com base na legislação ANVISA vigente.
                         </div>
                         <a href="https://portal.crfsp.org.br/" target="_blank" rel="noopener noreferrer">Acessar CRF-SP</a>
                     </div>
+
                     <div class="source-card card-animate">
-                        <h3><span aria-hidden="true">📋</span> Consulta Remédios (Linguagem Simples)</h3>
-                        <p>Traduz as bulas oficiais para uma linguagem simples e direta, em formato de perguntas e respostas. Perfeito para quem quer entender rápido sem termos técnicos.</p>
+                        <h3><span aria-hidden="true">📋</span> Consulta Remédios</h3>
+                        <p>Bulas em linguagem simples, formato de perguntas e respostas. Ideal para entender rápido, sem termos técnicos.</p>
                         <div class="usage-tip">
                             <strong>Como usar passo a passo:</strong>
-                            1. Clique no link abaixo para acessar o Bulário do Consulta Remédios.<br>
+                            1. Abra o link abaixo.<br>
                             2. Use a <strong>barra de busca no topo</strong> e digite o nome do remédio (ex: "Ibuprofeno").<br>
-                            3. Na lista de resultados, clique no nome do produto desejado.<br>
-                            4. A página do remédio mostra abas: leia <strong>"Para que serve"</strong> e <strong>"Como usar"</strong>.<br>
-                            5. Role a página para ver <strong>"Efeitos colaterais"</strong> e <strong>"Contraindicações"</strong> em linguagem simples.<br>
-                            <em>⚠️ Use como complemento educativo — a bula oficial da ANVISA é sempre a referência definitiva.</em>
+                            3. Clique no produto na lista de resultados.<br>
+                            4. Leia as abas <strong>"Para que serve"</strong> e <strong>"Como usar"</strong>.<br>
+                            5. Role para ver <strong>"Efeitos colaterais"</strong> e <strong>"Contraindicações"</strong>.<br>
+                            <em>⚠️ Sempre consulte a bula oficial da ANVISA para confirmar.</em>
                         </div>
                         <a href="https://consultaremedios.com.br/bulas" target="_blank" rel="noopener noreferrer">Consultar Remédios</a>
                     </div>
+
                     <div class="source-card card-animate">
                         <h3><span aria-hidden="true">🩺</span> Portal Tua Saúde</h3>
-                        <p>Portal de saúde com artigos sobre medicamentos, doenças e bem-estar, com revisão médica e farmacêutica. Pertence ao Grupo Rede D'Or, maior rede hospitalar privada do Brasil.</p>
+                        <p>Artigos com revisão médica e farmacêutica. Pertence ao Grupo Rede D'Or, maior rede hospitalar privada do Brasil.</p>
                         <div class="usage-tip">
                             <strong>Como usar passo a passo:</strong>
-                            1. Acesse o portal pelo link abaixo.<br>
-                            2. Clique na seção <strong>"Saúde A-Z"</strong> no menu superior, depois em <strong>"Bulas e remédios"</strong>.<br>
-                            3. <em>Ou</em> use a <strong>barra de busca no topo</strong> e digite o nome do medicamento ou sintoma.<br>
-                            4. Nos artigos, verifique o <strong>nome do médico ou farmacêutico revisor</strong> (aparece no início do texto) — isso confirma a credibilidade.<br>
-                            5. Foque nas seções: <em>"Para que serve"</em>, <em>"Efeitos colaterais"</em> e <em>"Interações com alimentos"</em>.
+                            1. Acesse pelo link abaixo (direto na seção de bulas).<br>
+                            2. Use a <strong>barra de busca no topo</strong> e digite o medicamento ou sintoma.<br>
+                            3. Nos artigos, verifique o <strong>nome do revisor médico</strong> (aparece no início do texto).<br>
+                            4. Foque em: <em>"Para que serve"</em>, <em>"Efeitos colaterais"</em> e <em>"Interações com alimentos"</em>.
                         </div>
                         <a href="https://www.tuasaude.com/t/bulas-e-remedios/" target="_blank" rel="noopener noreferrer">Explorar Tua Saúde</a>
                     </div>
+
                     <div class="source-card card-animate">
                         <h3><span aria-hidden="true">👨‍⚕️</span> Portal Drauzio Varella</h3>
-                        <p>Artigos, reportagens e vídeos didáticos do médico e divulgador científico Dr. Drauzio Varella, explicando riscos de medicamentos e uso inadequado de remédios.</p>
+                        <p>Artigos e vídeos didáticos do Dr. Drauzio Varella explicando riscos reais de medicamentos e da automedicação.</p>
                         <div class="usage-tip">
                             <strong>Como usar passo a passo:</strong>
-                            1. Entre no site oficial pelo link abaixo.<br>
-                            2. No <strong>menu superior</strong>, clique em <strong>"Doenças e Condições"</strong> ou <strong>"Medicamentos"</strong>.<br>
-                            3. <em>Ou</em> use a <strong>lupa (🔍)</strong> no canto superior direito para pesquisar um medicamento ou sintoma específico.<br>
-                            4. Prefira artigos que exibam a data de publicação recente e o <strong>nome do médico colaborador</strong>.<br>
-                            5. Os vídeos curtos no site são especialmente úteis para entender o tema de forma visual e acessível.
+                            1. Entre no site pelo link abaixo.<br>
+                            2. No menu superior, clique em <strong>"Doenças e Condições"</strong> ou <strong>"Medicamentos"</strong>.<br>
+                            3. Ou use a <strong>lupa 🔍</strong> no canto superior direito para pesquisar.<br>
+                            4. Prefira artigos com data recente e nome do médico colaborador.<br>
+                            5. Os vídeos curtos são ótimos para entender o tema visualmente.
                         </div>
                         <a href="https://drauziovarella.uol.com.br/" target="_blank" rel="noopener noreferrer">Acessar Drauzio Varella</a>
                     </div>
+
                 </div>
             </section>
 
-            <!-- ── Seção 6: FAQ Accordion ── -->
+            <!-- ══ Seção 6: FAQ ══ -->
             <section id="faq" aria-labelledby="faq-heading">
-                <h2 id="faq-heading"><span aria-hidden="true">❓</span> Dúvidas Comuns (O que todos perguntam)</h2>
+                <h2 id="faq-heading"><span aria-hidden="true">❓</span> Dúvidas Comuns</h2>
+                <p>Perguntas que todo mundo faz — respostas baseadas em evidências científicas:</p>
 
-                <details class="faq-item card-animate">
-                    <summary>
-                        O remédio venceu faz apenas uma semana, ainda posso tomar?
-                        <span class="faq-chevron" aria-hidden="true">▼</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p><strong>A resposta é não.</strong> Após o vencimento, a estabilidade química não é garantida. O remédio pode não fazer efeito ou, em alguns casos, sofrer alterações que agridem o seu estômago e rins.</p>
-                    </div>
-                </details>
+                <div class="faq-list">
+                    <details class="faq-item card-animate">
+                        <summary>
+                            O remédio venceu faz apenas uma semana, ainda posso tomar?
+                            <span class="faq-chevron" aria-hidden="true">▼</span>
+                        </summary>
+                        <div class="faq-answer" role="region">
+                            <p><strong>Não.</strong> Após o vencimento, a estabilidade química não é garantida. O remédio pode não fazer efeito ou sofrer alterações que agridem o estômago e os rins.</p>
+                        </div>
+                    </details>
 
-                <details class="faq-item card-animate">
-                    <summary>
-                        Esqueci de tomar a dose no horário. Devo tomar duas agora?
-                        <span class="faq-chevron" aria-hidden="true">▼</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p><strong>Nunca tome dose dupla.</strong> Isso pode causar uma sobrecarga perigosa e intoxicação imediata. Tome a dose esquecida assim que lembrar, mas se estiver muito perto da próxima, apenas pule a que esqueceu.</p>
-                    </div>
-                </details>
+                    <details class="faq-item card-animate">
+                        <summary>
+                            Esqueci de tomar a dose no horário. Devo tomar duas agora?
+                            <span class="faq-chevron" aria-hidden="true">▼</span>
+                        </summary>
+                        <div class="faq-answer" role="region">
+                            <p><strong>Nunca tome dose dupla.</strong> Isso pode causar sobrecarga perigosa e intoxicação imediata. Tome a dose esquecida assim que lembrar — mas se estiver muito perto da próxima, apenas pule a que esqueceu.</p>
+                        </div>
+                    </details>
 
-                <details class="faq-item card-animate">
-                    <summary>
-                        Minha vizinha tomou este remédio e melhorou. Posso tomar também?
-                        <span class="faq-chevron" aria-hidden="true">▼</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p><strong>Não. Cada organismo é um universo.</strong> O que curou ela pode causar uma alergia fatal em você ou mascarar um problema mais sério que precisa de diagnóstico médico.</p>
-                    </div>
-                </details>
+                    <details class="faq-item card-animate">
+                        <summary>
+                            Minha vizinha tomou este remédio e melhorou. Posso tomar também?
+                            <span class="faq-chevron" aria-hidden="true">▼</span>
+                        </summary>
+                        <div class="faq-answer" role="region">
+                            <p><strong>Não. Cada organismo é único.</strong> O que curou ela pode causar reação alérgica grave em você ou mascarar um problema mais sério que precisa de diagnóstico médico.</p>
+                        </div>
+                    </details>
+                </div>
             </section>
 
-            <!-- ── Seção 7: Compartilhar ── -->
+            <!-- ══ Seção 7: Compartilhar ══ -->
             <section id="proximos-passos" aria-labelledby="proximos-passos-heading">
                 <h2 id="proximos-passos-heading"><span aria-hidden="true">📤</span> Vamos espalhar saúde?</h2>
                 <p>O conhecimento é a ferramenta mais poderosa de prevenção. Compartilhe este guia com sua família e amigos para que todos fiquem protegidos.</p>
-                <button type="button" class="btn" onclick="shareSite()" aria-label="Compartilhar este guia com a comunidade">
-                    <span aria-hidden="true">📤</span> Compartilhar com a Comunidade
-                </button>
+
+                <div class="share-panel" role="group" aria-label="Opções de compartilhamento">
+                    <button type="button" class="share-btn share-whatsapp" id="btn-whatsapp"
+                            onclick="shareWhatsApp()" aria-label="Compartilhar via WhatsApp">
+                        <span aria-hidden="true">💬</span> WhatsApp
+                    </button>
+                    <button type="button" class="share-btn share-copy" id="btn-copy"
+                            onclick="copyLink()" aria-label="Copiar link deste guia">
+                        <span aria-hidden="true">🔗</span> Copiar link
+                    </button>
+                    <button type="button" class="share-btn share-native" id="btn-native"
+                            onclick="shareNative()" aria-label="Compartilhar via menu do dispositivo">
+                        <span aria-hidden="true">📤</span> Compartilhar
+                    </button>
+                </div>
+                <div class="share-feedback" id="share-feedback" role="status" aria-live="polite">
+                    <span aria-hidden="true">✅</span> Link copiado! Compartilhe com quem você ama.
+                </div>
             </section>
+
         </main>
     </div>
 
     <!-- Botões flutuantes -->
-    <button type="button" class="floating-share" onclick="shareSite()" aria-label="Compartilhar este guia">
-        <span aria-hidden="true">📤</span>
-    </button>
-    <button type="button" id="back-to-top" class="back-to-top" aria-label="Voltar ao topo" inert>
-        <span aria-hidden="true">⬆️</span>
+    <button type="button" class="floating-share" onclick="shareWhatsApp()"
+            aria-label="Compartilhar via WhatsApp">
+        <span aria-hidden="true">💬</span>
     </button>
 
+    <button type="button" id="back-to-top" class="back-to-top"
+            aria-label="Voltar ao início da página" inert>
+        <span aria-hidden="true">↑</span>
+    </button>
+
+    <!-- ══ Footer ══ -->
     <footer>
-        <p>&copy; 2026 Medicamentos Seguros. Educação que Transforma e Salva Vidas.</p>
-        <div class="authorship">
-            Este projeto foi desenvolvido por <strong>Sarah</strong><br>
-            Projeto de Extensão da disciplina de <strong>Saúde e Bem Estar</strong><br>
-            Universidade Católica de Brasília (<strong>UCB</strong>)<br>
-            <small>Última atualização: 02 de março de 2026</small>
+        <p>&copy; 2026 Medicamentos Seguros — Educação que Transforma e Salva Vidas.</p>
+
+        <div class="footer-authorship">
+            Desenvolvido por <strong>Sarah</strong><br>
+            Projeto de Extensão · Disciplina de <strong>Saúde e Bem Estar</strong><br>
+            Universidade Católica de Brasília (<strong>UCB</strong>)
+            <small>Última atualização: 03 de março de 2026</small>
         </div>
+
+        <!-- Mini changelog -->
+        <div class="changelog">
+            <h3>Histórico de atualizações</h3>
+            <ul>
+                <li><time datetime="2026-03-03">03/03/2026</time> — Melhorias de acessibilidade, compartilhamento e layout mobile</li>
+                <li><time datetime="2026-03-03">03/03/2026</time> — Auditoria farmacêutica: correção da interação antibióticos/anticoncepcional</li>
+                <li><time datetime="2026-03-02">02/03/2026</time> — Tutoriais detalhados para cada fonte de pesquisa</li>
+                <li><time datetime="2026-03-02">02/03/2026</time> — Lançamento do site com 7 fontes verificadas</li>
+            </ul>
+        </div>
+
         <div class="footer-links">
             <button type="button" onclick="openModal('terms-modal')">Termos de Uso</button>
             <button type="button" onclick="openModal('privacy-modal')">Privacidade</button>
         </div>
     </footer>
 
-    <!-- Modals (aria-hidden=true por padrão, aria-modal para leitores de tela) -->
-    <div id="terms-modal" class="modal" role="dialog" aria-labelledby="terms-title" aria-hidden="true" aria-modal="true">
+    <!-- ══ Modal: Termos de Uso ══ -->
+    <div id="terms-modal" class="modal" role="dialog"
+         aria-labelledby="terms-title" aria-hidden="true" aria-modal="true">
         <div class="modal-content">
-            <button type="button" class="close-modal" onclick="closeModal('terms-modal')" aria-label="Fechar modal de Termos de Uso">&times;</button>
+            <button type="button" class="close-modal"
+                    onclick="closeModal('terms-modal')"
+                    aria-label="Fechar Termos de Uso">&times;</button>
             <h2 id="terms-title">Termos de Uso</h2>
-            <p>Este portal tem caráter estritamente educativo e informativo. As orientações aqui contidas não substituem, em hipótese alguma, a consulta médica ou farmacêutica presencial.</p>
-            <p class="modal-disclaimer">A autora não se responsabiliza pelo uso indevido das informações. Em caso de dúvidas sobre sua saúde, procure sempre um profissional qualificado.</p>
-        </div>
-    </div>
-    <div id="privacy-modal" class="modal" role="dialog" aria-labelledby="privacy-title" aria-hidden="true" aria-modal="true">
-        <div class="modal-content">
-            <button type="button" class="close-modal" onclick="closeModal('privacy-modal')" aria-label="Fechar modal de Privacidade">&times;</button>
-            <h2 id="privacy-title">Privacidade</h2>
-            <p>Respeitamos sua privacidade. Este site não coleta, armazena ou compartilha nenhum dado pessoal dos usuários. A navegação é 100% anônima.</p>
+            <p>Este portal tem caráter estritamente <strong>educativo e informativo</strong>. As orientações aqui contidas não substituem, em hipótese alguma, a consulta médica ou farmacêutica presencial.</p>
+            <p>A autora não se responsabiliza pelo uso indevido das informações. Em caso de dúvidas sobre sua saúde, procure sempre um profissional de saúde qualificado.</p>
+            <p>As informações foram produzidas com base em fontes oficiais (ANVISA, Ministério da Saúde, CFF) e revisadas na data de publicação. O conteúdo pode ser desatualizado em relação a novas regulamentações ou evidências científicas publicadas após a data informada no rodapé.</p>
         </div>
     </div>
 
-    <!-- JSON-LD Schema (URL corrigida) -->
+    <!-- ══ Modal: Privacidade ══ -->
+    <div id="privacy-modal" class="modal" role="dialog"
+         aria-labelledby="privacy-title" aria-hidden="true" aria-modal="true">
+        <div class="modal-content">
+            <button type="button" class="close-modal"
+                    onclick="closeModal('privacy-modal')"
+                    aria-label="Fechar Privacidade">&times;</button>
+            <h2 id="privacy-title">Política de Privacidade</h2>
+
+            <h3>Dados coletados pelo site</h3>
+            <p>Este site <strong>não coleta, armazena nem compartilha dados pessoais</strong> dos visitantes. Não há formulários de cadastro, cookies de rastreamento ou ferramentas de analytics ativas por parte da autora.</p>
+
+            <h3>Hospedagem (Netlify)</h3>
+            <p>O site é hospedado na plataforma <strong>Netlify</strong>. Como toda hospedagem web, a Netlify pode manter <strong>logs técnicos de acesso</strong> (endereço IP, data/hora, navegador e página acessada) por motivos de segurança e operação da infraestrutura. Esses logs são gerenciados exclusivamente pela Netlify, de acordo com a <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener noreferrer">Política de Privacidade da Netlify</a>.</p>
+
+            <h3>Fontes externas</h3>
+            <p>Este site utiliza a fonte <strong>Inter e Merriweather via Google Fonts</strong>. Ao carregar as fontes, o Google pode registrar o IP do visitante conforme sua <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">política própria</a>.</p>
+
+            <h3>Compartilhamento</h3>
+            <p>O botão de compartilhamento via WhatsApp abre um link externo da plataforma WhatsApp/Meta. Nenhum dado é enviado a terceiros por iniciativa deste site.</p>
+
+            <h3>Contato</h3>
+            <p>Dúvidas sobre privacidade podem ser enviadas à autora pelo canal da disciplina na UCB.</p>
+        </div>
+    </div>
+
+    <!-- ══ Schema.org — FAQPage (SEO) ══ -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "MedicalWebPage",
-        "name": "Medicamentos Seguros - Guia de Uso Racional",
-        "description": "Guia educativo sobre o uso seguro de medicamentos e os riscos da automedicação",
-        "url": "https://medsegura.netlify.app",
-        "author": {
-            "@type": "Person",
-            "name": "Sarah",
-            "affiliation": {
-                "@type": "EducationalOrganization",
-                "name": "Universidade Católica de Brasília"
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "name": "Medicamentos Seguros",
+                "url": "https://medsegura.netlify.app",
+                "description": "Guia educativo sobre os riscos da automedicação e o uso seguro de medicamentos no Brasil.",
+                "author": {
+                    "@type": "Person",
+                    "name": "Sarah",
+                    "affiliation": {
+                        "@type": "EducationalOrganization",
+                        "name": "Universidade Católica de Brasília"
+                    }
+                },
+                "datePublished": "2026-03-02",
+                "dateModified":  "2026-03-03",
+                "inLanguage": "pt-BR"
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "O remédio venceu faz apenas uma semana, ainda posso tomar?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Não. Após o vencimento, a estabilidade química não é garantida. O remédio pode não fazer efeito ou sofrer alterações que agridem o estômago e os rins."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Esqueci de tomar a dose no horário. Devo tomar duas agora?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Nunca tome dose dupla. Isso pode causar sobrecarga perigosa e intoxicação imediata. Tome a dose esquecida assim que lembrar — se estiver muito perto da próxima, apenas pule a que esqueceu."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Minha vizinha tomou este remédio e melhorou. Posso tomar também?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Não. Cada organismo é único. O que curou ela pode causar reação alérgica grave em você ou mascarar um problema mais sério que precisa de diagnóstico médico."
+                        }
+                    }
+                ]
             }
-        },
-        "datePublished": "2026-03-02",
-        "dateModified": "2026-03-02",
-        "mainEntity": {
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "O remédio venceu faz apenas uma semana, ainda posso tomar?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Não. Após o vencimento, a estabilidade química não é garantida."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Esqueci de tomar a dose no horário. Devo tomar duas agora?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Nunca tome dose dupla. Isso pode causar uma sobrecarga perigosa e intoxicação imediata."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Minha vizinha tomou este remédio e melhorou. Posso tomar também?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Não. Cada organismo é diferente. O que curou ela pode causar uma reação grave em você."
-                    }
-                }
-            ]
-        }
+        ]
     }
     </script>
 
     <script>
-        /* ─────────────────────────────────────────
-           Tema: dark mode + preferência do sistema
-        ───────────────────────────────────────── */
-        const themeToggle = document.getElementById('theme-toggle');
-        const body        = document.body;
-        const menuToggle  = document.getElementById('menu-toggle');
-        const sidebar     = document.getElementById('sidebar');
+        /* ══════════════════════════════════════
+           TEMA DARK/LIGHT
+        ══════════════════════════════════════ */
+        const themeBtn   = document.getElementById('theme-toggle');
+        const body       = document.body;
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar    = document.getElementById('sidebar');
 
-        const savedTheme  = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const saved      = localStorage.getItem('theme');
+        const sysDark    = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const startDark  = saved === 'dark' || (!saved && sysDark);
 
-        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        if (startDark) {
             body.classList.add('dark-mode');
-            themeToggle.querySelector('span').textContent = '☀️';
-            themeToggle.setAttribute('aria-pressed', 'true');
+            themeBtn.querySelector('span').textContent = '☀️';
+            themeBtn.setAttribute('aria-pressed', 'true');
+            themeBtn.setAttribute('aria-label', 'Desativar modo escuro');
         }
 
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            const isDark = body.classList.contains('dark-mode');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            themeToggle.querySelector('span').textContent = isDark ? '☀️' : '🌙';
-            themeToggle.setAttribute('aria-pressed', String(isDark));
+        themeBtn.addEventListener('click', () => {
+            const dark = body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', dark ? 'dark' : 'light');
+            themeBtn.querySelector('span').textContent = dark ? '☀️' : '🌙';
+            themeBtn.setAttribute('aria-pressed', String(dark));
+            themeBtn.setAttribute('aria-label', dark ? 'Desativar modo escuro' : 'Ativar modo escuro');
         });
 
-        /* ─────────────────────────────────────────
-           Menu mobile
-        ───────────────────────────────────────── */
+        /* ══════════════════════════════════════
+           MENU MOBILE
+        ══════════════════════════════════════ */
         menuToggle.addEventListener('click', () => {
-            const isOpen = sidebar.classList.toggle('active');
+            const open = sidebar.classList.toggle('active');
             menuToggle.classList.toggle('active');
-            menuToggle.setAttribute('aria-expanded', String(isOpen));
+            menuToggle.setAttribute('aria-expanded', String(open));
+            menuToggle.setAttribute('aria-label', open ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
         });
 
-        document.querySelectorAll('.sidebar a').forEach(link => {
-            link.addEventListener('click', () => {
+        sidebar.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
                 sidebar.classList.remove('active');
                 menuToggle.classList.remove('active');
                 menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Abrir menu de navegação');
             });
         });
 
-        /* ─────────────────────────────────────────
-           Modal com focus trap
-        ───────────────────────────────────────── */
-        function openModal(modalId) {
-            const modal = document.getElementById(modalId);
+        // Fechar sidebar ao pressionar Escape
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+                menuToggle.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.focus();
+            }
+        });
+
+        /* ══════════════════════════════════════
+           MODAL COM FOCUS TRAP
+        ══════════════════════════════════════ */
+        let _lastFocus = null;
+
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            _lastFocus  = document.activeElement;
+
             modal.style.display = 'block';
             modal.setAttribute('aria-hidden', 'false');
             body.style.overflow = 'hidden';
 
-            // Foco no botão de fechar
-            const closeBtn = modal.querySelector('.close-modal');
-            if (closeBtn) closeBtn.focus();
-
-            // Focus trap
-            const focusable = modal.querySelectorAll(
+            const focusable = Array.from(modal.querySelectorAll(
                 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-            );
-            const first = focusable[0];
-            const last  = focusable[focusable.length - 1];
+            ));
+            if (focusable[0]) focusable[0].focus();
 
-            modal._trap = (e) => {
+            const trap = e => {
                 if (e.key !== 'Tab') return;
+                const first = focusable[0];
+                const last  = focusable[focusable.length - 1];
                 if (e.shiftKey) {
                     if (document.activeElement === first) { e.preventDefault(); last.focus(); }
                 } else {
-                    if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+                    if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
                 }
             };
-            modal.addEventListener('keydown', modal._trap);
+            modal._trap = trap;
+            modal.addEventListener('keydown', trap);
         }
 
-        function closeModal(modalId) {
-            const modal = document.getElementById(modalId);
+        function closeModal(id) {
+            const modal = document.getElementById(id);
             modal.style.display = 'none';
             modal.setAttribute('aria-hidden', 'true');
-            body.style.overflow = 'auto';
-            if (modal._trap) {
-                modal.removeEventListener('keydown', modal._trap);
-                modal._trap = null;
-            }
+            body.style.overflow = '';
+            if (modal._trap) { modal.removeEventListener('keydown', modal._trap); modal._trap = null; }
+            if (_lastFocus) { _lastFocus.focus(); _lastFocus = null; }
         }
 
-        // Fecha com Escape
-        document.addEventListener('keydown', (e) => {
+        document.addEventListener('keydown', e => {
             if (e.key === 'Escape') {
                 document.querySelectorAll('.modal').forEach(m => {
                     if (m.style.display === 'block') closeModal(m.id);
@@ -985,118 +1349,146 @@
             }
         });
 
-        // Fecha clicando fora
-        window.addEventListener('click', (e) => {
+        window.addEventListener('click', e => {
             if (e.target.classList.contains('modal')) closeModal(e.target.id);
         });
 
-        /* ─────────────────────────────────────────
-           Smooth scroll da navegação
-        ───────────────────────────────────────── */
-        document.querySelectorAll('.sidebar a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) window.scrollTo({ top: target.offsetTop - 110, behavior: 'smooth' });
-            });
-        });
+        /* ══════════════════════════════════════
+           COMPARTILHAMENTO
+        ══════════════════════════════════════ */
+        const SHARE_URL   = 'https://medsegura.netlify.app';
+        const SHARE_TEXT  = 'Guia educativo sobre o uso seguro de medicamentos — UCB. Proteja você e sua família! ❤️';
+        const SHARE_TITLE = 'Medicamentos Seguros — Guia de Uso Racional';
 
-        /* ─────────────────────────────────────────
-           Compartilhar
-        ───────────────────────────────────────── */
-        async function shareSite() {
-            if (navigator.share) {
-                try {
-                    await navigator.share({
-                        title: 'Medicamentos Seguros',
-                        text: 'Guia educativo sobre o uso seguro de medicamentos — UCB.',
-                        url: window.location.href
-                    });
-                } catch (_) {}
-            } else {
-                try {
-                    await navigator.clipboard.writeText(window.location.href);
-                    alert('Link copiado! ❤️ Compartilhe com quem você ama.');
-                } catch (_) {
-                    alert('Copie o link da barra de endereços para compartilhar!');
-                }
+        function showFeedback(msg) {
+            const fb = document.getElementById('share-feedback');
+            fb.querySelector('span').nextSibling.textContent = ' ' + msg;
+            fb.classList.add('visible');
+            setTimeout(() => fb.classList.remove('visible'), 3500);
+        }
+
+        function shareWhatsApp() {
+            const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(SHARE_TEXT + '\n' + SHARE_URL)}`;
+            window.open(url, '_blank', 'noopener,noreferrer');
+        }
+
+        async function copyLink() {
+            try {
+                await navigator.clipboard.writeText(SHARE_URL);
+                showFeedback('Link copiado! Compartilhe com quem você ama. ❤️');
+            } catch {
+                // Fallback: seleciona texto
+                const ta = document.createElement('textarea');
+                ta.value = SHARE_URL;
+                ta.style.cssText = 'position:fixed;opacity:0';
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                showFeedback('Link copiado!');
             }
         }
 
-        /* ─────────────────────────────────────────
-           Scroll: progresso + back-to-top + scrollspy
-        ───────────────────────────────────────── */
+        async function shareNative() {
+            if (navigator.share) {
+                try {
+                    await navigator.share({ title: SHARE_TITLE, text: SHARE_TEXT, url: SHARE_URL });
+                } catch { /* cancelado pelo usuário */ }
+            } else {
+                await copyLink();
+            }
+        }
+
+        /* ══════════════════════════════════════
+           SCROLL: PROGRESSO + BACK-TO-TOP + SCROLLSPY
+        ══════════════════════════════════════ */
         const progressBar = document.getElementById('reading-progress');
         const backToTop   = document.getElementById('back-to-top');
 
+        let ticking = false;
         window.addEventListener('scroll', () => {
-            // Barra de progresso
-            const scrollTop    = window.pageYOffset;
-            const docHeight    = document.body.scrollHeight - window.innerHeight;
-            const progress     = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-            progressBar.value = Math.round(progress);
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const top     = window.pageYOffset;
+                    const height  = document.body.scrollHeight - window.innerHeight;
 
-            // Back to top
-            if (scrollTop > 400) {
-                backToTop.style.display = 'flex';
-                backToTop.removeAttribute('inert');
-            } else {
-                backToTop.style.display = 'none';
-                backToTop.setAttribute('inert', '');
+                    // Barra de progresso
+                    progressBar.value = height > 0 ? Math.round((top / height) * 100) : 0;
+
+                    // Back to top
+                    if (top > 400) {
+                        backToTop.style.display = 'flex';
+                        backToTop.removeAttribute('inert');
+                    } else {
+                        backToTop.style.display = 'none';
+                        backToTop.setAttribute('inert', '');
+                    }
+
+                    // ScrollSpy
+                    let current = '';
+                    document.querySelectorAll('section[id]').forEach(s => {
+                        if (top >= s.offsetTop - 130) current = s.id;
+                    });
+                    document.querySelectorAll('.nav-link').forEach(l => {
+                        l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+                    });
+
+                    ticking = false;
+                });
+                ticking = true;
             }
+        }, { passive: true });
 
-            // ScrollSpy
-            const sections  = document.querySelectorAll('section');
-            const navLinks  = document.querySelectorAll('.nav-link');
-            let current = '';
-            sections.forEach(section => {
-                if (scrollTop >= section.offsetTop - 120) current = section.id;
-            });
-            navLinks.forEach(link => {
-                link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top:0, behavior:'smooth' });
+        });
+
+        /* Smooth scroll da sidebar sem travar */
+        sidebar.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(a.getAttribute('href'));
+                if (!target) return;
+                const offset = target.getBoundingClientRect().top + window.pageYOffset - 110;
+                window.scrollTo({ top: offset, behavior: 'smooth' });
+                // Move foco para a seção (acessibilidade)
+                target.setAttribute('tabindex', '-1');
+                target.focus({ preventScroll: true });
             });
         });
 
-        document.getElementById('back-to-top').addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        /* ─────────────────────────────────────────
-           Contador animado (20.000 mortes/ano)
-        ───────────────────────────────────────── */
+        /* ══════════════════════════════════════
+           CONTADOR ANIMADO (20 000 mortes/ano)
+        ══════════════════════════════════════ */
         function animateCounter(el, target, duration) {
-            let start      = 0;
-            const increment = target / (duration / 16);
-            const timer    = setInterval(() => {
-                start += increment;
-                if (start >= target) {
-                    start = target;
-                    clearInterval(timer);
-                }
-                el.textContent = '~' + Math.floor(start).toLocaleString('pt-BR');
-            }, 16);
+            const start = performance.now();
+            function step(now) {
+                const elapsed  = now - start;
+                const progress = Math.min(elapsed / duration, 1);
+                // Easing out
+                const eased = 1 - Math.pow(1 - progress, 3);
+                el.textContent = '~' + Math.floor(eased * target).toLocaleString('pt-BR');
+                if (progress < 1) requestAnimationFrame(step);
+                else el.textContent = '~' + target.toLocaleString('pt-BR');
+            }
+            requestAnimationFrame(step);
         }
 
-        /* ─────────────────────────────────────────
-           IntersectionObserver: animações de entrada
-        ───────────────────────────────────────── */
+        /* ══════════════════════════════════════
+           INTERSECTION OBSERVER — ANIMAÇÕES
+        ══════════════════════════════════════ */
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry, i) => {
-                if (entry.isIntersecting) {
-                    // Atraso escalonado para cards em sequência
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-
-                        // Dispara contador quando o stat-card entrar na tela
-                        if (entry.target.classList.contains('stat-card')) {
-                            const counter = document.getElementById('death-counter');
-                            animateCounter(counter, 20000, 1800);
-                        }
-                    }, i * 80);
-                    observer.unobserve(entry.target);
-                }
+                if (!entry.isIntersecting) return;
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                    if (entry.target.classList.contains('stat-card')) {
+                        animateCounter(document.getElementById('death-counter'), 20000, 1800);
+                    }
+                }, i * 70);
+                observer.unobserve(entry.target);
             });
-        }, { threshold: 0.15 });
+        }, { threshold: 0.12 });
 
         document.querySelectorAll('.card-animate').forEach(el => observer.observe(el));
     </script>
